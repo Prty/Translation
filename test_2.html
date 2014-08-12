@@ -1,0 +1,333 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+<body>
+
+
+
+
+<style type="text/css">
+
+.entry-content {
+
+overflow: visible !important;
+
+}
+
+
+
+#state{
+
+font-size: 24px;
+
+}
+
+
+
+#result{
+
+width: 568px;
+
+min-height: 200px;
+
+border:1px solid #aaa;
+
+}
+
+#trans{
+
+width: 568px;
+
+min-height: 200px;
+
+border:1px solid #aaa;
+
+}
+
+
+
+#finalout{
+
+width: 563px;
+
+min-height: 200px;
+
+}
+
+
+
+.doing{
+
+color: #44f;
+
+}
+
+
+
+.final{
+
+padding-right: 1em;
+
+position: relative;
+
+}
+
+
+
+.final a{
+
+color: #333;
+
+}
+
+
+
+.final ol{
+
+margin: 0;
+
+overflow-x: hidden;
+
+list-style:none;
+
+top: 1em;
+
+z-index: 1000;
+
+display: table;
+
+position: absolute;
+
+background-color: #eee;
+
+}
+
+</style>
+
+<script type="text/javascript" >
+
+var t = [];
+
+var tnum = 0;
+
+var recognition = new webkitSpeechRecognition();
+
+//recognition.lang = "ja-JP";
+//recognition.lang = "en-US";
+
+recognition.interimResults = false; //中間結果あり
+
+recognition.continuous = true; // 連続認識
+
+recognition.maxAlternatives = 10; //認識仮説取得
+
+
+
+//認識中
+
+recognition.onsoundstart = function(){
+
+jQuery("#state").html('<span style="color:#800"><img src="http://plusblog.jp/chrome/doing.gif" />認識中</span>');
+
+};
+
+//マッチなし
+
+recognition.onnomatch = function(){
+
+jQuery("#state").text('認識できません');
+
+};
+
+//エラー
+
+recognition.onerror= function(){
+
+jQuery("#state").text('エラー');
+
+};
+
+//認識終了
+
+recognition.onsoundend = function(){
+
+jQuery("#state").text('停止中');
+
+};
+
+
+
+recognition.onresult = function(event){
+
+if (typeof(event.results) == 'undefined') {
+
+jQuery("#state").text('<span style="color:#800">最新のGoogle Chromeのみで動作します</span>');
+
+recognition.onend = null;
+
+recognition.stop();
+
+return;
+
+}
+
+
+
+var results = event.results;
+
+t[tnum] = {};
+
+
+
+for (var i = event.resultIndex; i<results.length; i++){
+
+if(results[i].isFinal){
+
+t[tnum].view = results[i][0].transcript.replace(/^\s+/, '');
+
+t[tnum].alternatives = [];
+
+//console.log(t[tnum].view);
+
+
+getTranslate(t[tnum].view);
+
+
+if ( results[i].length ){
+
+for (var j = 0; j<results[i].length; j++){
+
+t[tnum].alternatives[j] = results[i][j].transcript.replace(/^\s+/, '');
+
+}
+
+}
+
+tnum++;
+
+} else {
+
+t[tnum].view = results[i][0].transcript.replace(/^\s+/, '');
+
+}
+
+}
+
+trender();
+
+};
+
+
+function getTranslate(str){
+
+
+$.getJSON("https://www.googleapis.com/language/translate/v2?source=en&target=ja&key=AIzaSyA8YKsoQwIwqKaw50q7PPrqViI7wwzdDlY&format=text&q="+str, function(json){
+  console.log("JSON Data: " + json.data.translations[0].translatedText);
+
+	//speaker(json.data.translations[0].translatedText);
+	jQuery("#trans").html(json.data.translations[0].translatedText);
+});
+
+}
+
+function speaker(str){
+var msg = new SpeechSynthesisUtterance();
+msg.text = str;
+//msg.text = "JavaScript (JS) is a dynamic computer programming language."
+msg.lang = "en-US"
+window.speechSynthesis.speak(msg);
+}
+
+
+function trender( clear ){
+
+if ( clear !== undefined ){
+
+t=[];
+
+tnum = 0;
+
+}
+
+var out = '';
+
+for (var i = 0; i<t.length; i++){
+
+if ( t[i].alternatives !== undefined ){
+
+var alternatives = '';
+
+if ( t[i].alternatives.length ){
+
+for (var j = 0; j<t[i].alternatives.length; j++){
+
+alternatives += '<li><a href="javascript:void(0)" onclick="jQuery(\'#final'+i+'\').text(\''+t[i].alternatives[j]+'\'); jQuery(\'#ol'+i+'\').hide()">'+t[i].alternatives[j]+'</a></li>';
+
+}
+
+alternatives = '<ol style="display:none;" id="ol'+i+'">'+alternatives+'</ol>';
+
+}
+
+out += '<span class="final"><a href="javascript:void(0)" onclick="jQuery(\'#ol'+i+'\').toggle()" id="final'+i+'">'+t[i].view+'</a>'+alternatives+'</span>';
+
+} else {
+
+out += '<span class="doing">'+t[i].view+'</span>';
+
+}
+
+}
+
+jQuery("#result").html(out);
+
+}
+
+
+
+function tcopy(){
+
+var o = [];
+
+var oend = '';
+
+var delimiter = jQuery('input[name="delimiter"]').filter(':checked').val();
+
+if ( delimiter == 'n' ) delimiter = "\n";
+
+if ( delimiter == '、' ) oend = '。';
+
+jQuery("#result .final>a").each( function(){ o.push(jQuery(this).text()) } );
+
+jQuery('#finalout').val(o.join(delimiter)+oend);
+
+}
+
+</script>
+
+
+
+<input type="button" value="音声認識開始" onclick="recognition.start();" />
+
+<input type="button" value="終了" onclick="recognition.stop();" />
+
+
+
+<div id="state">停止中</div>
+
+<p><div id="result"></div></p>
+
+
+<p><div id="trans"></div></p>
+
+</body>
+</html>

@@ -1,0 +1,2360 @@
+
+<!DOCTYPE html>
+
+<html lang="ja" xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:mixi="http://mixi-platform.com/ns#" >
+
+<head>
+
+<meta charset="UTF-8" />
+
+<title>音声認識テキスト化 Chrome書記 : plusblog</title>
+
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+
+<link rel="shortcut icon" href="/favicon.ico" />
+
+<link rel="pingback" href="http://plusblog.jp/xmlrpc.php" />
+
+<link rel="alternate" type="application/rss+xml" title="plusblog &raquo; フィード" href="http://plusblog.jp/feed/" />
+
+<link rel="alternate" type="application/rss+xml" title="plusblog &raquo; コメントフィード" href="http://plusblog.jp/comments/feed/" />
+
+<link rel="alternate" type="application/rss+xml" title="plusblog &raquo; 音声認識テキスト化 Chrome書記 のコメントのフィード" href="http://plusblog.jp/tool/chrome/feed/" />
+
+<link rel='stylesheet' id='contact-form-7-css' href='http://plusblog.jp/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=3.8' type='text/css' media='all' />
+
+<link rel='stylesheet' id='wp-pagenavi-css' href='http://plusblog.jp/wp-content/plugins/wp-pagenavi/pagenavi-css.css?ver=2.70' type='text/css' media='all' />
+
+<script type='text/javascript' src='http://plusblog.jp/wp-includes/js/jquery/jquery.js?ver=1.11.0'></script>
+
+<script type='text/javascript' src='http://plusblog.jp/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://plusblog.jp/xmlrpc.php?rsd" />
+
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://plusblog.jp/wp-includes/wlwmanifest.xml" />
+
+<meta name="generator" content="WordPress 3.9" />
+
+<link rel='canonical' href='http://plusblog.jp/tool/chrome/' />
+
+<link rel='shortlink' href='http://plusblog.jp/?p=9029' />
+
+
+
+<!-- SWFObject 2.1 for WP-Al-SWFObject -->
+
+<script src="http://plusblog.jp/wp-content/plugins/wp-al-swfobject/2.1/swfobject.js" type="text/javascript"></script>
+
+<style type="text/css"></style><script type="text/javascript"></script>
+
+<link rel="stylesheet" type="text/css" media="all" href="http://plusblog.jp/wp-content/themes/plus7/style.css" />
+
+
+
+
+
+<meta property="og:title" content="音声認識テキスト化 Chrome書記" />
+
+<meta property="og:description" content="Chrome書記は、Google Chromeブラウザで動作する音声認識機能を使い、音声をテキスト化するWEBアプリ。最新のChromeとマイクが必要です。マイクに向かって話した言葉がテキストに変換されます。Google音声認識は非常に精度が高く、メリハリよく丁寧に話すことによって、キーボードに匹敵する速度で文字入力が行えます。印刷物の文字起こし等にお使いください。&amp;nbsp;
+
+
+
+使い方
+
+サンプルで桃太郎を用意しました。音声認識ボタ..." />
+
+<meta property="og:url" content="http://plusblog.jp/tool/chrome/" />
+
+<meta property="og:image" content="http://plusblog.jp/wp-content/uploads/2013/09/chrome-300x300.jpg" />
+
+<meta property="og:author" content="plusblog.jp" />
+
+
+
+<meta property="og:site_name" content="plusblog" />
+
+<meta property="og:type" content="blog" />
+
+<meta property="fb:app_id" content="178850692211440" />
+
+<meta name="twitter:card" content="summary" />
+
+<meta name="twitter:site" content="@plustakk">
+
+</head>
+
+
+
+<body class="page page-id-9029 page-child parent-pageid-1156 page-template-default">
+
+
+
+<div id="fb-root"></div>
+
+<script>
+
+(function(d, s, id) {
+
+var js, fjs = d.getElementsByTagName(s)[0];
+
+if (d.getElementById(id)) return;
+
+js = d.createElement(s); js.id = id;
+
+js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1&appId=178850692211440";
+
+fjs.parentNode.insertBefore(js, fjs);
+
+}(document, 'script', 'facebook-jssdk'));
+
+</script>
+
+
+
+
+
+<div id="header">
+
+<div id="header_wrapper">
+
+<div id="site-title">
+
+<span><a href="http://plusblog.jp/" title="plusblog" rel="home"><img src="http://plusblog.jp/wp-content/themes/plus7/images/logo5.png" alt="plusblog" width="80" height="106"></a></span>
+
+</div>
+
+<ul id="header_recommend">
+
+<li>
+
+<a href="http://plusblog.jp/10678/"><img src="http://plusblog.jp/wp-content/uploads/2014/03/top7-135x80.jpg" /></a>
+
+<a href="http://plusblog.jp/10678/">理系にも分かるイラストの描き方</a>
+
+</li>
+
+<li>
+
+<a href="http://plusblog.jp/7482/"><img src="http://plusblog.jp/wp-content/uploads/2013/03/132-135x80.jpg" /></a>
+
+<a href="http://plusblog.jp/7482/">腰痛が消えた高性能クッション</a>
+
+</li>
+
+<li>
+
+<a href="http://plusblog.jp/7684/"><img src="http://plusblog.jp/wp-content/uploads/2013/04/1_2-135x80.jpg" /></a>
+
+<a href="http://plusblog.jp/7684/">変態映像作家クリス・カニンガムPVベスト10</a>
+
+</li>
+
+<li>
+
+<a href="http://plusblog.jp/9435/"><img src="http://plusblog.jp/wp-content/uploads/2013/11/114-135x80.jpg" /></a>
+
+<a href="http://plusblog.jp/9435/">裏おすすめ映画ベスト12</a>
+
+</li>
+
+<li>
+
+<a href="http://plusblog.jp/7217/"><img src="http://plusblog.jp/wp-content/uploads/2013/03/510BE9QK4QL._SS500_-135x80.jpg" /></a>
+
+<a href="http://plusblog.jp/7217/">血肉となった漫画ベスト20+10</a>
+
+</li>
+
+<li>
+
+<a href="http://plusblog.jp/8804/"><img src="http://plusblog.jp/wp-content/uploads/2013/08/asa-135x80.jpg" /></a>
+
+<a href="http://plusblog.jp/8804/">夜中は見ないほうがいい30代おじさんの料理メモ</a>
+
+</li>
+
+</ul>
+
+<div id="access" role="navigation">
+
+<div class="menu-header"><ul id="menu-%e3%83%87%e3%83%95%e3%82%a9%e3%83%ab%e3%83%88" class="menu"><li id="menu-item-6669" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor current-menu-ancestor current-menu-parent current-page-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-6669"><a href="http://plusblog.jp/tool/">WEBツール</a>
+
+<ul class="sub-menu">
+
+<li id="menu-item-11162" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-9029 current_page_item menu-item-11162"><a href="http://plusblog.jp/tool/chrome/">音声認識テキスト化 Chrome書記</a></li>
+
+<li id="menu-item-11163" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11163"><a href="http://plusblog.jp/tool/mandalart/">マンダラート</a></li>
+
+<li id="menu-item-11169" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11169"><a href="http://iphone-screenshot.com/">iPhone Screenshot Maker</a></li>
+
+<li id="menu-item-11171" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11171"><a href="http://plusblog.jp/botti/">ぼっち英会話</a></li>
+
+<li id="menu-item-11170" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11170"><a href="http://calendar-pdf.net/">デザカレ</a></li>
+
+<li id="menu-item-11165" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11165"><a href="http://plusblog.jp/tool/5w1h/">５Ｗ１Ｈエディタ</a></li>
+
+<li id="menu-item-11166" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11166"><a href="http://plusblog.jp/tool/colorbath/">カラーバス</a></li>
+
+<li id="menu-item-11167" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11167"><a href="http://plusblog.jp/tool/osborn/">オズボーンのチェックリスト</a></li>
+
+<li id="menu-item-11172" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11172"><a href="http://plusblog.jp/face/">顔ツボ辞典</a></li>
+
+<li id="menu-item-11164" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11164"><a href="http://plusblog.jp/tool/trend/">トレンドbot@ツイッター</a></li>
+
+<li id="menu-item-11161" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11161"><a href="http://plusblog.jp/tool/trend2/">急上昇ワード動画まとめ</a></li>
+
+<li id="menu-item-11174" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11174"><a href="http://eyehacker.net/">アイハッカー</a></li>
+
+<li id="menu-item-11168" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11168"><a href="http://plusblog.jp/tool/affilink/">アフィリンク</a></li>
+
+<li id="menu-item-11173" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11173"><a href="http://picrop.net/">ピックロップ</a></li>
+
+</ul>
+
+</li>
+
+<li id="menu-item-9371" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-9371"><a href="http://plusblog.jp/category/art/">アート</a>
+
+<ul class="sub-menu">
+
+<li id="menu-item-10942" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10942"><a href="http://plusblog.jp/category/art/illustration/">イラスト</a></li>
+
+<li id="menu-item-10969" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10969"><a href="http://plusblog.jp/category/cg/">CG</a></li>
+
+<li id="menu-item-10960" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10960"><a href="http://plusblog.jp/category/film/">映画</a></li>
+
+<li id="menu-item-10959" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10959"><a href="http://plusblog.jp/category/music/">音楽</a></li>
+
+<li id="menu-item-10968" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10968"><a href="http://plusblog.jp/category/game/">ゲーム</a></li>
+
+</ul>
+
+</li>
+
+<li id="menu-item-9368" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-9368"><a href="http://plusblog.jp/category/design/">デザイン</a>
+
+<ul class="sub-menu">
+
+<li id="menu-item-10943" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10943"><a href="http://plusblog.jp/category/design/wallpaper/">壁紙</a></li>
+
+<li id="menu-item-10961" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10961"><a href="http://plusblog.jp/category/web/wordpress/">ワードプレス</a></li>
+
+<li id="menu-item-10964" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10964"><a href="http://plusblog.jp/category/web/css/">CSS</a></li>
+
+<li id="menu-item-10963" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10963"><a href="http://plusblog.jp/category/web/jquery/">jQuery</a></li>
+
+<li id="menu-item-10965" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10965"><a href="http://plusblog.jp/category/web/bootstrap/">Bootstrap</a></li>
+
+<li id="menu-item-10962" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10962"><a href="http://plusblog.jp/category/web/js/">JavaScript</a></li>
+
+</ul>
+
+</li>
+
+<li id="menu-item-10970" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10970"><a href="http://plusblog.jp/category/iphone/ios/">アプリ開発</a></li>
+
+<li id="menu-item-9369" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-9369"><a href="http://plusblog.jp/category/lifehack/">ライフハック</a>
+
+<ul class="sub-menu">
+
+<li id="menu-item-10949" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10949"><a href="http://plusblog.jp/category/lifehack/work/">仕事術</a></li>
+
+<li id="menu-item-10967" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10967"><a href="http://plusblog.jp/category/idea/">アイデア</a></li>
+
+<li id="menu-item-10944" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10944"><a href="http://plusblog.jp/category/lifehack/approach/">考え方</a></li>
+
+<li id="menu-item-10945" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10945"><a href="http://plusblog.jp/category/lifehack/cooking/">料理</a></li>
+
+<li id="menu-item-10946" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10946"><a href="http://plusblog.jp/category/lifehack/thoughts/">雑感</a></li>
+
+<li id="menu-item-10947" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10947"><a href="http://plusblog.jp/category/lifehack/trivia/">雑学</a></li>
+
+<li id="menu-item-10966" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10966"><a href="http://plusblog.jp/category/web/blog/">ブログ運営</a></li>
+
+<li id="menu-item-10957" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10957"><a href="http://plusblog.jp/category/gadget/">ガジェット</a></li>
+
+<li id="menu-item-10958" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10958"><a href="http://plusblog.jp/category/audio/">オーディオ</a></li>
+
+<li id="menu-item-10948" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10948"><a href="http://plusblog.jp/category/lifehack/aquarium/">熱帯魚</a></li>
+
+</ul>
+
+</li>
+
+<li id="menu-item-9094" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-9094"><a href="http://plusblog.jp/category/photo/">PHOTO</a>
+
+<ul class="sub-menu">
+
+<li id="menu-item-10954" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10954"><a href="http://plusblog.jp/category/photo/nz/">ニュージーランド</a></li>
+
+<li id="menu-item-10955" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10955"><a href="http://plusblog.jp/category/photo/animal-photo/">動物</a></li>
+
+<li id="menu-item-10956" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10956"><a href="http://plusblog.jp/category/photo/nature/">自然</a></li>
+
+</ul>
+
+</li>
+
+<li id="menu-item-6681" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-6681"><a href="http://plusblog.jp/category/interesting/">おもしろ</a>
+
+<ul class="sub-menu">
+
+<li id="menu-item-10935" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10935"><a href="http://plusblog.jp/category/interesting/cute/">かわいい</a></li>
+
+<li id="menu-item-10936" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10936"><a href="http://plusblog.jp/category/interesting/calm/">なごむ</a></li>
+
+<li id="menu-item-10937" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10937"><a href="http://plusblog.jp/category/interesting/cool/">カッコイイ</a></li>
+
+<li id="menu-item-10938" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10938"><a href="http://plusblog.jp/category/interesting/surrealism/">シュール</a></li>
+
+<li id="menu-item-10939" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10939"><a href="http://plusblog.jp/category/interesting/black/">ブラック</a></li>
+
+<li id="menu-item-10940" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10940"><a href="http://plusblog.jp/category/interesting/animal/">動物</a></li>
+
+<li id="menu-item-10941" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10941"><a href="http://plusblog.jp/category/interesting/fear/">怖い</a></li>
+
+<li id="menu-item-10950" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10950"><a href="http://plusblog.jp/category/interesting/impressed/">感動</a></li>
+
+<li id="menu-item-10951" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10951"><a href="http://plusblog.jp/category/interesting/nostalgic/">懐かしい</a></li>
+
+<li id="menu-item-10952" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10952"><a href="http://plusblog.jp/category/interesting/funny/">笑える</a></li>
+
+<li id="menu-item-10953" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10953"><a href="http://plusblog.jp/category/interesting/surprise/">驚く</a></li>
+
+</ul>
+
+</li>
+
+<li id="menu-item-6676" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6676"><a href="http://plusblog.jp/profile/">ABOUT</a></li>
+
+</ul></div></div>
+
+</div>
+
+</div><!-- #header -->
+
+
+
+<div id="main">
+
+<div id="container">
+
+<div id="content" role="main">
+
+
+
+
+
+
+
+<div id="nav-above" class="navigation">
+
+</div><!-- #nav-above -->
+
+
+
+<div id="post-9029" class="post-9029 page type-page status-publish has-post-thumbnail hentry">
+
+<div class="post_container">
+
+<h1 class="entry-title">音声認識テキスト化 Chrome書記</h1>
+
+
+
+<div class="entry-meta">
+
+<span class="meta-prep meta-prep-author"></span> <a href="http://plusblog.jp/tool/chrome/" title="2013/09/28 00:27" rel="bookmark" class="entry_times"><span class="entry-date date updated">2013/09/28</span></a>&nbsp;<span class="vcard author"><span class="fn"><a href="http://plus.google.com/107971933764823895567" rel="author">takk</a></span></span>
+
+</div><!-- .entry-meta -->
+
+
+
+<div class="socials"></div>
+
+<div></div>
+
+
+
+
+
+
+
+<div class="entry-content">
+
+<p><img src="http://plusblog.jp/wp-content/uploads/2013/09/chrome-300x300.jpg" alt="chrome" width="300" height="300" class="alignright size-medium wp-image-9030" />Chrome書記は、Google Chromeブラウザで動作する音声認識機能を使い、音声をテキスト化するWEBアプリ。最新のChromeとマイクが必要です。</p><p>マイクに向かって話した言葉がテキストに変換されます。Google音声認識は非常に精度が高く、メリハリよく丁寧に話すことによって、キーボードに匹敵する速度で文字入力が行えます。</p><p>印刷物の文字起こし等にお使いください。</p><div id="content_top_ad">
+
+<p style="margin-bottom:0">スポンサーリンク</p>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<!-- plusblog_336x280_B -->
+
+<ins class="adsbygoogle"
+
+style="display:inline-block;width:336px;height:280px"
+
+data-ad-client="ca-pub-6230201288790304"
+
+data-ad-slot="1007873558"></ins>
+
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+</div><!--content_top_ad--></p><p style="clear:both">&nbsp;</p>
+
+
+
+<h2>使い方</h2>
+
+<p>サンプルで桃太郎を用意しました。音声認識ボタンを押してから発声してみてください。一気に長く読まないように、適度に間を置くことで認識率を上げることができます。長く間があくと自動的に認識処理は終了します。</p><p>間によって文章は区切られますが、清書ボタンでテキストエリアに連結することができます。文章をクリックで他の候補の表示、置き換えもできます。</p>
+
+<p><iframe width="560" height="420" src="//www.youtube.com/embed/zZGZgZ7E4GY" frameborder="0" allowfullscreen></iframe></p>
+
+<p>&nbsp;</p>
+
+
+
+<h2>サンプル</h2>
+
+<p>むかしむかし、あるところに、おじいさんとおばあさんが住んでいました。 おじいさんは山へしばかりに、おばあさんは川へせんたくに行きました。</p>
+
+
+
+<style type="text/css">
+
+.entry-content {
+
+overflow: visible !important;
+
+}
+
+
+
+#state{
+
+font-size: 24px;
+
+}
+
+
+
+#result{
+
+width: 568px;
+
+min-height: 200px;
+
+border:1px solid #aaa;
+
+}
+
+
+
+#finalout{
+
+width: 563px;
+
+min-height: 200px;
+
+}
+
+
+
+.doing{
+
+color: #44f;
+
+}
+
+
+
+.final{
+
+padding-right: 1em;
+
+position: relative;
+
+}
+
+
+
+.final a{
+
+color: #333;
+
+}
+
+
+
+.final ol{
+
+margin: 0;
+
+overflow-x: hidden;
+
+list-style:none;
+
+top: 1em;
+
+z-index: 1000;
+
+display: table;
+
+position: absolute;
+
+background-color: #eee;
+
+}
+
+</style>
+
+<script type="text/javascript" >
+
+var t = [];
+
+var tnum = 0;
+
+var recognition = new webkitSpeechRecognition();
+
+recognition.lang = "ja-JP";
+
+recognition.interimResults = true; //中間結果あり
+
+recognition.continuous = true; // 連続認識
+
+recognition.maxAlternatives = 10; //認識仮説取得
+
+
+
+//認識中
+
+recognition.onsoundstart = function(){
+
+jQuery("#state").html('<span style="color:#800"><img src="http://plusblog.jp/chrome/doing.gif" />認識中</span>');
+
+};
+
+//マッチなし
+
+recognition.onnomatch = function(){
+
+jQuery("#state").text('認識できません');
+
+};
+
+//エラー
+
+recognition.onerror= function(){
+
+jQuery("#state").text('エラー');
+
+};
+
+//認識終了
+
+recognition.onsoundend = function(){
+
+jQuery("#state").text('停止中');
+
+};
+
+
+
+recognition.onresult = function(event){
+
+if (typeof(event.results) == 'undefined') {
+
+jQuery("#state").text('<span style="color:#800">最新のGoogle Chromeのみで動作します</span>');
+
+recognition.onend = null;
+
+recognition.stop();
+
+return;
+
+}
+
+
+
+var results = event.results;
+
+t[tnum] = {};
+
+
+
+for (var i = event.resultIndex; i<results.length; i++){
+
+if(results[i].isFinal){
+
+t[tnum].view = results[i][0].transcript.replace(/^\s+/, '');
+
+t[tnum].alternatives = [];
+
+if ( results[i].length ){
+
+for (var j = 0; j<results[i].length; j++){
+
+t[tnum].alternatives[j] = results[i][j].transcript.replace(/^\s+/, '');
+
+}
+
+}
+
+tnum++;
+
+} else {
+
+t[tnum].view = results[i][0].transcript.replace(/^\s+/, '');
+
+}
+
+}
+
+trender();
+
+};
+
+
+
+function trender( clear ){
+
+if ( clear !== undefined ){
+
+t=[];
+
+tnum = 0;
+
+}
+
+var out = '';
+
+for (var i = 0; i<t.length; i++){
+
+if ( t[i].alternatives !== undefined ){
+
+var alternatives = '';
+
+if ( t[i].alternatives.length ){
+
+for (var j = 0; j<t[i].alternatives.length; j++){
+
+alternatives += '<li><a href="javascript:void(0)" onclick="jQuery(\'#final'+i+'\').text(\''+t[i].alternatives[j]+'\'); jQuery(\'#ol'+i+'\').hide()">'+t[i].alternatives[j]+'</a></li>';
+
+}
+
+alternatives = '<ol style="display:none;" id="ol'+i+'">'+alternatives+'</ol>';
+
+}
+
+out += '<span class="final"><a href="javascript:void(0)" onclick="jQuery(\'#ol'+i+'\').toggle()" id="final'+i+'">'+t[i].view+'</a>'+alternatives+'</span>';
+
+} else {
+
+out += '<span class="doing">'+t[i].view+'</span>';
+
+}
+
+}
+
+jQuery("#result").html(out);
+
+}
+
+
+
+function tcopy(){
+
+var o = [];
+
+var oend = '';
+
+var delimiter = jQuery('input[name="delimiter"]').filter(':checked').val();
+
+if ( delimiter == 'n' ) delimiter = "\n";
+
+if ( delimiter == '、' ) oend = '。';
+
+jQuery("#result .final>a").each( function(){ o.push(jQuery(this).text()) } );
+
+jQuery('#finalout').val(o.join(delimiter)+oend);
+
+}
+
+</script>
+
+
+
+<input type="button" value="音声認識開始" onclick="recognition.start();" />
+
+<input type="button" value="終了" onclick="recognition.stop();" />
+
+
+
+<div id="state">停止中</div>
+
+<p><div id="result"></div></p>
+
+区切り
+
+<label><input type="radio" name="delimiter" value="、" checked>句読点</label>
+
+<label><input type="radio" name="delimiter" value="" >なし</label>
+
+<label><input type="radio" name="delimiter" value=" " >スペース</label>
+
+<label><input type="radio" name="delimiter" value="n" >改行</label>
+
+
+
+<input type="button" value="清書" onclick="tcopy();" />
+
+<input type="button" value="↓ をクリア" onclick="jQuery('#finalout').val('')" />
+
+<input type="button" value="↑ をクリア" onclick="trender(1);" />
+
+<textarea id="finalout"></textarea>
+
+
+
+<p>&nbsp;</p>
+
+<p>Chrome音声認識で英語のスピーキング力を測定するWEBアプリも公開してます。</p>
+
+<ol id="same_day_posts">
+
+<li><a href="http://plusblog.jp/9242/" title="映画のセリフで英語力診断『ぼっち英会話』"><div class="sdp_thumb"><img width="300" height="198" src="http://plusblog.jp/wp-content/uploads/2013/10/botti_logo-300x198.jpg" class="attachment-post-thumbnail wp-post-image" alt="botti_logo" /></div><div class="sdp_title"><span class="sdp_date">2013/10/24</span>映画のセリフで英語力診断『ぼっち英会話』</a><ul class="sdp_cats sdp_cats_small"><a href=http://plusblog.jp/category/web-tool/botti/>ぼっち英会話</a><a href=http://plusblog.jp/category/lifehack/>ライフハック</a><a href=http://plusblog.jp/category/film/>映画</a></ul></div></li></ol>
+
+
+
+</div><!-- .entry-content -->
+
+<br />
+
+
+
+<div class="socials"></div>
+
+
+
+<div id="content_bottom_ad">
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<!-- plusblog_336x280_C -->
+
+<ins class="adsbygoogle"
+
+style="display:inline-block;width:336px;height:280px"
+
+data-ad-client="ca-pub-6230201288790304"
+
+data-ad-slot="7060751559"></ins>
+
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+<p style="margin-bottom:0">スポンサーリンク</p>
+
+</div><!--content_bottom_ad-->
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="yarp-title">関連記事</h2>
+
+<div class='yarpp-related'>
+
+<div id="yarp6">
+
+<ol>
+
+<li>
+
+<a href="http://plusblog.jp/9032/" title="Chrome専用の音声認識テキスト化WEBアプリ『Chrome書記』" class="yarp6left"><img src="http://b.hatena.ne.jp/entry/image/http://plusblog.jp/9032/" border="0" class="hatena"><img src="http://plusblog.jp/wp-content/uploads/2013/09/chrome-150x150.jpg" class="yarp6img" /></a>
+
+<div class="yarp6right">
+
+<a href="http://plusblog.jp/9032/" title="Chrome専用の音声認識テキスト化WEBアプリ『Chrome書記』" class="yarp6title">Chrome専用の音声認識テキスト化WEBアプリ『Chrome書記』</a>
+
+<p>『Chrome書記』はマイクの音声からテキスト文字に変換するWEBツール。印刷物 <a href="http://plusblog.jp/9032/" class="morelink btn btn-default">続きを読む</a></p>
+
+</div>
+
+</li>
+
+<li>
+
+<a href="http://plusblog.jp/9867/" title="2013年の人気記事ベスト10" class="yarp6left"><img src="http://b.hatena.ne.jp/entry/image/http://plusblog.jp/9867/" border="0" class="hatena"><img src="http://plusblog.jp/wp-content/uploads/2013/12/plusfire-150x150.png" class="yarp6img" /></a>
+
+<div class="yarp6right">
+
+<a href="http://plusblog.jp/9867/" title="2013年の人気記事ベスト10" class="yarp6title">2013年の人気記事ベスト10</a>
+
+<p>日刊でつづけている当ブログ、いつも読んでくれてありがとうございます。実は今月1日 <a href="http://plusblog.jp/9867/" class="morelink btn btn-default">続きを読む</a></p>
+
+</div>
+
+</li>
+
+<li>
+
+<a href="http://plusblog.jp/9331/" title="文字を円に沿って配置するjQueryプラグイン『CircleType.js』" class="yarp6left"><img src="http://b.hatena.ne.jp/entry/image/http://plusblog.jp/9331/" border="0" class="hatena"><img src="http://plusblog.jp/wp-content/uploads/2013/11/12-150x121.jpg" class="yarp6img" /></a>
+
+<div class="yarp6right">
+
+<a href="http://plusblog.jp/9331/" title="文字を円に沿って配置するjQueryプラグイン『CircleType.js』" class="yarp6title">文字を円に沿って配置するjQueryプラグイン『CircleType.js』</a>
+
+<p>文字を円に沿って配置するjQueryプラグイン&#8221;CircleType <a href="http://plusblog.jp/9331/" class="morelink btn btn-default">続きを読む</a></p>
+
+</div>
+
+</li>
+
+<li>
+
+<a href="http://plusblog.jp/7054/" title="ワードプレス(WP)ではじめてのテーマカスタマイズ" class="yarp6left"><img src="http://b.hatena.ne.jp/entry/image/http://plusblog.jp/7054/" border="0" class="hatena"><img src="http://plusblog.jp/wp-content/uploads/2013/03/happy-150x150.png" class="yarp6img" /></a>
+
+<div class="yarp6right">
+
+<a href="http://plusblog.jp/7054/" title="ワードプレス(WP)ではじめてのテーマカスタマイズ" class="yarp6title">ワードプレス(WP)ではじめてのテーマカスタマイズ</a>
+
+<p>当ブログも開設から１年を過ぎ、いよいよ重い腰を上げてデザインをリニューアルするこ <a href="http://plusblog.jp/7054/" class="morelink btn btn-default">続きを読む</a></p>
+
+</div>
+
+</li>
+
+<li>
+
+<a href="http://plusblog.jp/6208/" title="File APIを使った複数ファイルのドラッグ＆ドロップアップロードwith進捗プログレスバー表示でハマり道中記" class="yarp6left"><img src="http://b.hatena.ne.jp/entry/image/http://plusblog.jp/6208/" border="0" class="hatena"><img src="http://plusblog.jp/wp-content/uploads/2012/10/drug-150x150.jpg" class="yarp6img" /></a>
+
+<div class="yarp6right">
+
+<a href="http://plusblog.jp/6208/" title="File APIを使った複数ファイルのドラッグ＆ドロップアップロードwith進捗プログレスバー表示でハマり道中記" class="yarp6title">File APIを使った複数ファイルのドラッグ＆ドロップアップロードwith進捗プログレスバー表示でハマり道中記</a>
+
+<p>新しいWEBサービスでファイルアップロードを実装することに。できれば複数ファイル <a href="http://plusblog.jp/6208/" class="morelink btn btn-default">続きを読む</a></p>
+
+</div>
+
+</li>
+
+<li>
+
+<a href="http://plusblog.jp/3406/" title="IMGタグのストレスを激減して画像王に俺はなる" class="yarp6left"><img src="http://b.hatena.ne.jp/entry/image/http://plusblog.jp/3406/" border="0" class="hatena"><img src="http://plusblog.jp/wp-content/uploads/2012/04/813468_57255770-214x3001-150x150.jpg" class="yarp6img" /></a>
+
+<div class="yarp6right">
+
+<a href="http://plusblog.jp/3406/" title="IMGタグのストレスを激減して画像王に俺はなる" class="yarp6title">IMGタグのストレスを激減して画像王に俺はなる</a>
+
+<p>文字ばかりのページって、よっぽどコンテンツ力がないと見る気がしない。でも一点でも <a href="http://plusblog.jp/3406/" class="morelink btn btn-default">続きを読む</a></p>
+
+</div>
+
+</li>
+
+<li>
+
+<a href="http://plusblog.jp/3215/" title="PHPの究極シンプルなカレンダー関数" class="yarp6left"><img src="http://b.hatena.ne.jp/entry/image/http://plusblog.jp/3215/" border="0" class="hatena"><img src="http://plusblog.jp/wp-content/uploads/2012/09/php-300x157-150x150.png" class="yarp6img" /></a>
+
+<div class="yarp6right">
+
+<a href="http://plusblog.jp/3215/" title="PHPの究極シンプルなカレンダー関数" class="yarp6title">PHPの究極シンプルなカレンダー関数</a>
+
+<p>WEBアプリなどで、ちょっとした時にシンプルなカレンダーを出力したい時があります <a href="http://plusblog.jp/3215/" class="morelink btn btn-default">続きを読む</a></p>
+
+</div>
+
+</li>
+
+<li>
+
+<a href="http://plusblog.jp/6523/" title="ブラウザやOSのCSSクラスを追加するJavaScript「CSS Browser Selector」を読み解く" class="yarp6left"><img src="http://b.hatena.ne.jp/entry/image/http://plusblog.jp/6523/" border="0" class="hatena"><img src="http://plusblog.jp/wp-content/uploads/2012/12/angry-150x150.jpg" class="yarp6img" /></a>
+
+<div class="yarp6right">
+
+<a href="http://plusblog.jp/6523/" title="ブラウザやOSのCSSクラスを追加するJavaScript「CSS Browser Selector」を読み解く" class="yarp6title">ブラウザやOSのCSSクラスを追加するJavaScript「CSS Browser Selector」を読み解く</a>
+
+<p>数年前の自分なら読めなかった感が漂っていたので、初心者向けにちょっと読み解いてみ <a href="http://plusblog.jp/6523/" class="morelink btn btn-default">続きを読む</a></p>
+
+</div>
+
+</li>
+
+<li>
+
+<a href="http://plusblog.jp/5995/" title="ネットで出会った７つの助言" class="yarp6left"><img src="http://b.hatena.ne.jp/entry/image/http://plusblog.jp/5995/" border="0" class="hatena"><img src="http://plusblog.jp/wp-content/uploads/2012/09/bjork-150x150.png" class="yarp6img" /></a>
+
+<div class="yarp6right">
+
+<a href="http://plusblog.jp/5995/" title="ネットで出会った７つの助言" class="yarp6title">ネットで出会った７つの助言</a>
+
+<p>落ちる人間は決して頭が悪いのではない。 生活リズム、勉強のリズムを作り出せない人 <a href="http://plusblog.jp/5995/" class="morelink btn btn-default">続きを読む</a></p>
+
+</div>
+
+</li>
+
+<li>
+
+<a href="http://plusblog.jp/6186/" title="WEBで録音を実現する「WAMI recorder」が便利すぎてワラタ" class="yarp6left"><img src="http://b.hatena.ne.jp/entry/image/http://plusblog.jp/6186/" border="0" class="hatena"><img src="http://plusblog.jp/wp-content/uploads/2012/10/mic-150x150.png" class="yarp6img" /></a>
+
+<div class="yarp6right">
+
+<a href="http://plusblog.jp/6186/" title="WEBで録音を実現する「WAMI recorder」が便利すぎてワラタ" class="yarp6title">WEBで録音を実現する「WAMI recorder」が便利すぎてワラタ</a>
+
+<p>WEBサイトに録音機能を追加したくてリサーチ開始。Flashで簡単に出来そうだと <a href="http://plusblog.jp/6186/" class="morelink btn btn-default">続きを読む</a></p>
+
+</div>
+
+</li>
+
+<li>
+
+<a href="http://plusblog.jp/7881/" title="糸巻きボビンを大量に使ったアート" class="yarp6left"><img src="http://b.hatena.ne.jp/entry/image/http://plusblog.jp/7881/" border="0" class="hatena"><img src="http://plusblog.jp/wp-content/uploads/2013/05/19-150x150.jpg" class="yarp6img" /></a>
+
+<div class="yarp6right">
+
+<a href="http://plusblog.jp/7881/" title="糸巻きボビンを大量に使ったアート" class="yarp6title">糸巻きボビンを大量に使ったアート</a>
+
+<p>カラフルな『糸巻き』を使ったピクセルアート。反対に飾ってあるのをレンズ（アクリル <a href="http://plusblog.jp/7881/" class="morelink btn btn-default">続きを読む</a></p>
+
+</div>
+
+</li>
+
+<li>
+
+<a href="http://plusblog.jp/927/" title="アクセスアップでサーバー制限されない為のワードプレス(WP)高速化術" class="yarp6left"><img src="http://b.hatena.ne.jp/entry/image/http://plusblog.jp/927/" border="0" class="hatena"><img src="http://plusblog.jp/wp-content/uploads/2011/12/speed-300x2171-150x150.jpg" class="yarp6img" /></a>
+
+<div class="yarp6right">
+
+<a href="http://plusblog.jp/927/" title="アクセスアップでサーバー制限されない為のワードプレス(WP)高速化術" class="yarp6title">アクセスアップでサーバー制限されない為のワードプレス(WP)高速化術</a>
+
+<p>WPを手軽に適度に高速化してみます。 有名サイトに取り上げられたりして瞬間的にア <a href="http://plusblog.jp/927/" class="morelink btn btn-default">続きを読む</a></p>
+
+</div>
+
+</li>
+
+<li>
+
+<a href="http://plusblog.jp/6517/" title="さくらVPSでSQLite2+MDB2の壁を乗り越えず素直にSQLite3+pdoに移行" class="yarp6left"><img src="http://b.hatena.ne.jp/entry/image/http://plusblog.jp/6517/" border="0" class="hatena"><img src="http://plusblog.jp/wp-content/uploads/2012/12/meikyu-150x150.jpg" class="yarp6img" /></a>
+
+<div class="yarp6right">
+
+<a href="http://plusblog.jp/6517/" title="さくらVPSでSQLite2+MDB2の壁を乗り越えず素直にSQLite3+pdoに移行" class="yarp6title">さくらVPSでSQLite2+MDB2の壁を乗り越えず素直にSQLite3+pdoに移行</a>
+
+<p>新しいWEBサービスを本番環境にアップしてて、当然のようにMDB2を使ったら失敗 <a href="http://plusblog.jp/6517/" class="morelink btn btn-default">続きを読む</a></p>
+
+</div>
+
+</li>
+
+<li>
+
+<a href="http://plusblog.jp/11199/" title="Cocos2d-xでiPhone&amp;Androidアプリ開発記７ SQLiteの注意点" class="yarp6left"><img src="http://b.hatena.ne.jp/entry/image/http://plusblog.jp/11199/" border="0" class="hatena"><img src="http://plusblog.jp/wp-content/uploads/2014/05/SQLite-150x150.png" class="yarp6img" /></a>
+
+<div class="yarp6right">
+
+<a href="http://plusblog.jp/11199/" title="Cocos2d-xでiPhone&amp;Androidアプリ開発記７ SQLiteの注意点" class="yarp6title">Cocos2d-xでiPhone&#038;Androidアプリ開発記７ SQLiteの注意点</a>
+
+<p>Cocos2d-xからSQLiteを使うには、iOSとAndroidそれぞれにラ <a href="http://plusblog.jp/11199/" class="morelink btn btn-default">続きを読む</a></p>
+
+</div>
+
+</li>
+
+<li>
+
+<a href="http://plusblog.jp/6617/" title="Bootstrapに270のアイコンを追加するElusive Iconsを使ってみる" class="yarp6left"><img src="http://b.hatena.ne.jp/entry/image/http://plusblog.jp/6617/" border="0" class="hatena"><img src="http://plusblog.jp/wp-content/uploads/2013/01/11-150x150.jpg" class="yarp6img" /></a>
+
+<div class="yarp6right">
+
+<a href="http://plusblog.jp/6617/" title="Bootstrapに270のアイコンを追加するElusive Iconsを使ってみる" class="yarp6title">Bootstrapに270のアイコンを追加するElusive Iconsを使ってみる</a>
+
+<p>Bootstrapは標準で140種類のアイコンが使えます。単色のピクトグラムなの <a href="http://plusblog.jp/6617/" class="morelink btn btn-default">続きを読む</a></p>
+
+</div>
+
+</li>
+
+<li>
+
+<a href="http://plusblog.jp/4817/" title="映画のハッカーみたいなデザインを再現 JustGage" class="yarp6left"><img src="http://b.hatena.ne.jp/entry/image/http://plusblog.jp/4817/" border="0" class="hatena"><img src="http://plusblog.jp/wp-content/uploads/2012/08/gage-150x150.png" class="yarp6img" /></a>
+
+<div class="yarp6right">
+
+<a href="http://plusblog.jp/4817/" title="映画のハッカーみたいなデザインを再現 JustGage" class="yarp6title">映画のハッカーみたいなデザインを再現 JustGage</a>
+
+<p>映画に登場するハッキングシーンはビジュアル的にかなり格好いいですが、実際はUNI <a href="http://plusblog.jp/4817/" class="morelink btn btn-default">続きを読む</a></p>
+
+</div>
+
+</li>
+
+<li>
+
+<a href="http://plusblog.jp/3855/" title="今までの常識を覆す画期的な発明（になるかもしれない）２つ" class="yarp6left"><img src="http://b.hatena.ne.jp/entry/image/http://plusblog.jp/3855/" border="0" class="hatena"><img src="http://plusblog.jp/wp-content/uploads/2012/09/pic147-300x202-150x150.jpg" class="yarp6img" /></a>
+
+<div class="yarp6right">
+
+<a href="http://plusblog.jp/3855/" title="今までの常識を覆す画期的な発明（になるかもしれない）２つ" class="yarp6title">今までの常識を覆す画期的な発明（になるかもしれない）２つ</a>
+
+<p>今週ニュースで流れた新しい技術を２つご紹介。 一つ目はマウスやトラックパッドのよ <a href="http://plusblog.jp/3855/" class="morelink btn btn-default">続きを読む</a></p>
+
+</div>
+
+</li>
+
+<li>
+
+<a href="http://plusblog.jp/4179/" title="jQueryとCSS3で影を極めたプラグイン「Real Shadow」" class="yarp6left"><img src="http://b.hatena.ne.jp/entry/image/http://plusblog.jp/4179/" border="0" class="hatena"><img src="http://plusblog.jp/wp-content/uploads/2012/06/shadow-150x150.png" class="yarp6img" /></a>
+
+<div class="yarp6right">
+
+<a href="http://plusblog.jp/4179/" title="jQueryとCSS3で影を極めたプラグイン「Real Shadow」" class="yarp6title">jQueryとCSS3で影を極めたプラグイン「Real Shadow」</a>
+
+<p>CSS3にてマウスカーソルの位置から要素に動的に影を落とすjQueryプラグイン <a href="http://plusblog.jp/4179/" class="morelink btn btn-default">続きを読む</a></p>
+
+</div>
+
+</li>
+
+<li>
+
+<a href="http://plusblog.jp/6231/" title="出来るだけ高速＆手軽にIPアクセス制限するPHPスニペット" class="yarp6left"><img src="http://b.hatena.ne.jp/entry/image/http://plusblog.jp/6231/" border="0" class="hatena"><img src="http://plusblog.jp/wp-content/uploads/2012/11/top_display-150x150.jpg" class="yarp6img" /></a>
+
+<div class="yarp6right">
+
+<a href="http://plusblog.jp/6231/" title="出来るだけ高速＆手軽にIPアクセス制限するPHPスニペット" class="yarp6title">出来るだけ高速＆手軽にIPアクセス制限するPHPスニペット</a>
+
+<p>いま作っているWEBサービス（数日後にリリースします！iPhoneのスクリーンシ <a href="http://plusblog.jp/6231/" class="morelink btn btn-default">続きを読む</a></p>
+
+</div>
+
+</li>
+
+<li>
+
+<a href="http://plusblog.jp/6242/" title="ニコ動風にツイートを表示するjQueryプラグイン tweetDance.js" class="yarp6left"><img src="http://b.hatena.ne.jp/entry/image/http://plusblog.jp/6242/" border="0" class="hatena"><img src="http://plusblog.jp/wp-content/uploads/2012/11/rocksmith-150x150.jpg" class="yarp6img" /></a>
+
+<div class="yarp6right">
+
+<a href="http://plusblog.jp/6242/" title="ニコ動風にツイートを表示するjQueryプラグイン tweetDance.js" class="yarp6title">ニコ動風にツイートを表示するjQueryプラグイン tweetDance.js</a>
+
+<p>TwitterAPIのバージョンアップに伴い、tweetDance.jsの設置に <a href="http://plusblog.jp/6242/" class="morelink btn btn-default">続きを読む</a></p>
+
+</div>
+
+</li>
+
+<li>
+
+<a href="http://plusblog.jp/4424/" title="Yahoo! JAPANのトップページデザイン15年史" class="yarp6left"><img src="http://b.hatena.ne.jp/entry/image/http://plusblog.jp/4424/" border="0" class="hatena"><img src="http://plusblog.jp/wp-content/uploads/2012/07/1-570x6441-150x150.png" class="yarp6img" /></a>
+
+<div class="yarp6right">
+
+<a href="http://plusblog.jp/4424/" title="Yahoo! JAPANのトップページデザイン15年史" class="yarp6title">Yahoo! JAPANのトップページデザイン15年史</a>
+
+<p>ニュースや天気やメールなど、なんだかんだでヤフーをチェックしない日はありません。 <a href="http://plusblog.jp/4424/" class="morelink btn btn-default">続きを読む</a></p>
+
+</div>
+
+</li>
+
+<li>
+
+<a href="http://plusblog.jp/6424/" title="Google画像検索で高解像度のロゴのみをザクザク見る" class="yarp6left"><img src="http://b.hatena.ne.jp/entry/image/http://plusblog.jp/6424/" border="0" class="hatena"><img src="http://plusblog.jp/wp-content/uploads/2012/12/11-150x150.jpg" class="yarp6img" /></a>
+
+<div class="yarp6right">
+
+<a href="http://plusblog.jp/6424/" title="Google画像検索で高解像度のロゴのみをザクザク見る" class="yarp6title">Google画像検索で高解像度のロゴのみをザクザク見る</a>
+
+<p>ロゴ制作時に使えるTIPSをご紹介。 アイデア捻出とかでロゴをザーッと見たいとき <a href="http://plusblog.jp/6424/" class="morelink btn btn-default">続きを読む</a></p>
+
+</div>
+
+</li>
+
+<li>
+
+<a href="http://plusblog.jp/7219/" title="体温発電でメンテフリーのリマインダーリング" class="yarp6left"><img src="http://b.hatena.ne.jp/entry/image/http://plusblog.jp/7219/" border="0" class="hatena"><img src="http://plusblog.jp/wp-content/uploads/2013/03/410-150x150.jpg" class="yarp6img" /></a>
+
+<div class="yarp6right">
+
+<a href="http://plusblog.jp/7219/" title="体温発電でメンテフリーのリマインダーリング" class="yarp6title">体温発電でメンテフリーのリマインダーリング</a>
+
+<p>リングの内側に日付を刻印してくれるサービスは数あれど、この&#8221;The <a href="http://plusblog.jp/7219/" class="morelink btn btn-default">続きを読む</a></p>
+
+</div>
+
+</li>
+
+<li>
+
+<a href="http://plusblog.jp/3413/" title="板尾の持ち味は健在「スマートのタツジン」" class="yarp6left"><img src="http://b.hatena.ne.jp/entry/image/http://plusblog.jp/3413/" border="0" class="hatena"><img src="http://plusblog.jp/wp-content/uploads/2012/04/otiai-300x2471-150x150.jpg" class="yarp6img" /></a>
+
+<div class="yarp6right">
+
+<a href="http://plusblog.jp/3413/" title="板尾の持ち味は健在「スマートのタツジン」" class="yarp6title">板尾の持ち味は健在「スマートのタツジン」</a>
+
+<p>AV評論家の落合謙三と山本浩司による新しいブラビアの紹介動画「スマートのタツジン <a href="http://plusblog.jp/3413/" class="morelink btn btn-default">続きを読む</a></p>
+
+</div>
+
+</li>
+
+<li>
+
+<a href="http://plusblog.jp/5169/" title="ワードプレス(WP)で過去記事のリンクをアイキャッチなどを含めて出力" class="yarp6left"><img src="http://b.hatena.ne.jp/entry/image/http://plusblog.jp/5169/" border="0" class="hatena"><img src="http://plusblog.jp/wp-content/uploads/2012/08/5139-150x150.jpg" class="yarp6img" /></a>
+
+<div class="yarp6right">
+
+<a href="http://plusblog.jp/5169/" title="ワードプレス(WP)で過去記事のリンクをアイキャッチなどを含めて出力" class="yarp6title">ワードプレス(WP)で過去記事のリンクをアイキャッチなどを含めて出力</a>
+
+<p>過去記事のアクセスランキングなどで以前書いた記事を大量に紹介したいとき、文字リン <a href="http://plusblog.jp/5169/" class="morelink btn btn-default">続きを読む</a></p>
+
+</div>
+
+</li>
+
+</ol>
+
+</div>
+
+</div>
+
+<br />
+
+
+
+<div style="margin-bottom: 50px;">
+
+<iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fplusblog.jp&amp;width=570&amp;height=320&amp;colorscheme=light&amp;show_faces=true&amp;border_color=%23ffffff&amp;stream=false&amp;header=true&amp;appId=178850692211440" scrolling="no" frameborder="0" style="vertical-align: bottom; overflow:hidden; width:570px; height:320px;" class="facebook" allowTransparency="true"></iframe>
+
+</div>
+
+
+
+<h2 class="yarp-title">Social Response</h2>
+
+<!-- X:S ZenBackWidget --><div id="zenback-widget-loader"></div><script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var r=Math.ceil((new Date()*1)*Math.random());var j=d.createElement("script");j.id=i;j.async=true;j.src="//w.zenback.jp/v1/?base_uri=http%3A//plusblog.jp/&nsid=113489227987030883%3A%3A113489236577001194&rand="+r;d.body.appendChild(j);}}(document,"zenback-widget-js");</script><!-- X:E ZenBackWidget -->
+
+
+
+</div><!--post_container-->
+
+</div><!--post-##-->
+
+
+
+
+
+</div><!-- #content -->
+
+</div><!-- #container -->
+
+
+
+<div id="primary" class="widget-area" role="complementary">
+
+<ul class="xoxo">
+
+<li class="widget-container sidebar_ad" id="osusume">
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<!-- plusblog_336x280_A -->
+
+<ins class="adsbygoogle"
+
+style="display:inline-block;width:336px;height:280px"
+
+data-ad-client="ca-pub-6230201288790304"
+
+data-ad-slot="3282148458"></ins>
+
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+</li>
+
+
+
+
+
+<li class="widget-container app">
+
+<h3 class="widget-title">おすすめスマホアプリ</h3>
+
+<ul>
+
+<li>
+
+<img src="http://plusblog.jp/wp-content/themes/plus7/images/gizmo.png" alt="英単語ギズモのアイコン" />
+
+<a href="https://itunes.apple.com/jp/app/ying-dan-yugizumo/id865467544?mt=8" target="_blank">英単語ギズモ for iOS</a>
+
+<a href="https://play.google.com/store/apps/details?id=com.plusblog.word" target="_blank">英単語ギズモ for Android</a>
+
+<p>アルファベットのパズルゲーム。約28,800語の辞書を搭載しているので遊びながらボキャブラリーUP。</p>
+
+</li>
+
+<li>
+
+<img src="http://plusblog.jp/wp-content/themes/plus7/images/smpro.png" alt="Screenshot Maker Proのアイコン" />
+
+<a href="https://itunes.apple.com/jp/app/screenshot-maker-pro/id673545271?mt=8&uo=4&at=10l87g" target="_blank">Screenshot Maker Pro</a>
+
+<p>iPhone Screenshot MakerのiOS版です。WEBアクセスなしでフレーム合成できます。</p>
+
+</li>
+
+</ul>
+
+</li>
+
+
+
+
+
+<li class="widget-container sidepp webapp">
+
+<h3 class="widget-title">WEBツール</h3>
+
+<ul>
+
+<li>
+
+<a href="http://iphone-screenshot.com/" target="_blank"><img src="http://plusblog.jp/wp-content/themes/plus7/images/ism.jpg" alt="iPhone Screenshot Makerのアイコン" title="iPhone Screenshot Maker"></a>
+
+<a href="http://iphone-screenshot.com/" target="_blank">iPhone Screenshot Maker</a>
+
+<p>iPhoneのスクリーンショットにフレーム枠を合成できます。</p>
+
+</li>
+
+<li>
+
+<a href="http://calendar-pdf.net/" target="_blank"><img src="http://plusblog.jp/wp-content/themes/plus7/images/calendar_logo.jpg" alt="デザカレのアイコン" title="デザカレ" /></a>
+
+<a href="http://calendar-pdf.net/" target="_blank">デザカレ</a>
+
+<p>オリジナルの写真入りデザインカレンダーをサクッと作成。</p>
+
+</li>
+
+<li>
+
+<a href="http://plusblog.jp/botti/" target="_blank"><img src="http://plusblog.jp/wp-content/themes/plus7/images/botti.jpg" alt="ぼっち英会話のアイコン" title="ぼっち英会話"></a>
+
+<a href="http://plusblog.jp/botti/" target="_blank">ぼっち英会話</a>
+
+<p>Chromeで動作する映画のセリフをスピーキングして音声認識で採点。</p>
+
+</li>
+
+<li>
+
+<a href="http://plusblog.jp/tool/chrome/"><img src="http://plusblog.jp/wp-content/themes/plus7/images/chrome.jpg" alt="Chrome書記のアイコン" title="Chrome書記"></a>
+
+<a href="http://plusblog.jp/tool/chrome/">Chrome書記</a>
+
+<p>Chromeのみで動作する音声認識テキスト化WEBアプリ。</p>
+
+</li>
+
+<li>
+
+<a href="http://plusblog.jp/tool/mandalart/"><img src="http://plusblog.jp/wp-content/themes/plus7/images/mandalart_logo.jpg" alt="５Ｗ１Ｈエディタのアイコン" title="５Ｗ１Ｈエディタ" /></a>
+
+<a href="http://plusblog.jp/tool/mandalart/">マンダラート</a>
+
+<p>曼荼羅のように無限にアイデアを掘り下げる縦横無尽のツール。</p>
+
+</li>
+
+</ul>
+
+</li>
+
+
+
+<li class="widget-container sidepp">
+
+<h3 class="widget-title">おすすめ記事</h3>
+
+<ul class="wpp-list">
+
+<li><a href="http://plusblog.jp/11865/" class="crop135x80"><img width="135" height="135" src="http://plusblog.jp/wp-content/uploads/2014/08/12-150x150.jpg" class="attachment-135x135 wp-post-image" alt="1" /></a><a href="http://plusblog.jp/11865/">コード愛を感じるトランプ</a></li> <li><a href="http://plusblog.jp/11860/" class="crop135x80"><img width="135" height="135" src="http://plusblog.jp/wp-content/uploads/2014/08/11-150x150.jpg" class="attachment-135x135 wp-post-image" alt="1" /></a><a href="http://plusblog.jp/11860/">ゲルカヤノ20とフリーラン</a></li> <li>
+
+<a href="http://plusblog.jp/6158/"><img src="http://plusblog.jp/wp-content/uploads/2012/10/Transfer-135x80.jpg" /></a>
+
+<a href="http://plusblog.jp/6158/">これだけは見ておきたいアニメを使った神PVベスト10</a>
+
+</li>
+
+<li>
+
+<a href="http://plusblog.jp/9881/"><img src="http://plusblog.jp/wp-content/uploads/2014/01/top-135x80.jpg" /></a>
+
+<a href="http://plusblog.jp/9881/">仏教の悟りを解説したDr.苫米地の動画が凄い</a>
+
+</li>
+
+<li>
+
+<a href="http://plusblog.jp/7713/"><img src="http://plusblog.jp/wp-content/uploads/2013/04/117-135x80.jpg" /></a>
+
+<a href="http://plusblog.jp/7713/">とあるフリーランスの作業用BGM</a>
+
+</li>
+
+<li>
+
+<a href="http://plusblog.jp/6938/"><img src="http://plusblog.jp/wp-content/uploads/2013/02/idea1-135x80.jpg" /></a>
+
+<a href="http://plusblog.jp/6938/">控えめに言ってかなりの良書「アイデアのヒント」</a></p>
+
+</li>
+
+<li>
+
+<a href="http://plusblog.jp/4424/"><img src="http://plusblog.jp/wp-content/uploads/2012/07/1-135x80.jpg" /></a>
+
+<a href="http://plusblog.jp/4424/">Yahoo! JAPANのトップページデザイン15年史</a>
+
+</li>
+
+<li>
+
+<a href="http://plusblog.jp/7386/"><img src="http://plusblog.jp/wp-content/uploads/2013/03/searchs_logo1-135x80.jpg" /></a>
+
+<a href="http://plusblog.jp/7386/">Google以前の検索エンジン</a>
+
+</li>
+
+<li>
+
+<a href="http://plusblog.jp/3049/"><img src="http://plusblog.jp/wp-content/uploads/2012/03/browse1-135x80.jpg" /></a>
+
+<a href="http://plusblog.jp/3049/">敷布団からマットレスに変えたら目鱗ボロボロ</a>
+
+</li>
+
+<li>
+
+<a href="http://plusblog.jp/6357/"><img src="http://plusblog.jp/wp-content/uploads/2012/11/jacket-135x80.jpg" /></a>
+
+<a href="http://plusblog.jp/6357/">ロック史の名曲揃い！ロックスミス収録のギターが格好いい洋楽全51曲まとめ</a>
+
+</li>
+
+<li>
+
+<a href="http://plusblog.jp/6867/"><img src="http://plusblog.jp/wp-content/uploads/2013/02/k701-135x80.jpg" /></a>
+
+<a href="http://plusblog.jp/6867/">100万使って分かったオーディオの呪いについて</a>
+
+</li>
+
+<li>
+
+<a href="http://plusblog.jp/6296/"><img src="http://plusblog.jp/wp-content/uploads/2012/11/bjork-135x80.jpg" /></a>
+
+<a href="http://plusblog.jp/6296/">ビョークの新作PVとトップアーティストへの軌跡まとめ</a>
+
+</li>
+
+</ul>
+
+</li>
+
+
+
+<li class="widget-container sidebar_ad">
+
+<script type="text/javascript" src="http://aos-creative.prf.hn/creative/camref:11lGi7/creativeref:10l3569"></script></li>
+
+
+
+
+
+<li class="widget-container sidepp weekly">
+
+<!-- Wordpress Popular Posts Plugin v2.3.7 [SC] [weekly] [views] [custom] -->
+
+<h3 class="widget-title">週間TOP10</h3><ul class="wpp-list">
+
+<li><a href="http://plusblog.jp/11865/" title="コード愛を感じるトランプ" target="_self"><img src="http://plusblog.jp/wp-content/uploads/2014/08/12-135x80.jpg" alt="" border="0" width="135" height="80" class="wpp-thumbnail wpp_cached_thumb wpp_featured" /></a> <a href="http://plusblog.jp/11865/" title="コード愛を感じるトランプ">コード愛を感じるトランプ</a> </li>
+
+<li><a href="http://plusblog.jp/7482/" title="腰痛が消えた高性能クッション" target="_self"><img src="http://plusblog.jp/wp-content/uploads/2013/03/132-135x80.jpg" alt="" border="0" width="135" height="80" class="wpp-thumbnail wpp_cached_thumb wpp_featured" /></a> <a href="http://plusblog.jp/7482/" title="腰痛が消えた高性能クッション">腰痛が消えた高性能クッション</a> </li>
+
+<li><a href="http://plusblog.jp/10198/" title="Cocos2d-xでiPhone&Androidアプリ開発記１" target="_self"><img src="http://plusblog.jp/wp-content/uploads/2014/02/logo-135x80.jpg" alt="" border="0" width="135" height="80" class="wpp-thumbnail wpp_cached_thumb wpp_featured" /></a> <a href="http://plusblog.jp/10198/" title="Cocos2d-xでiPhone&Androidアプリ開発記１">Cocos2d-xでiPhone&Androidアプリ開発記１</a> </li>
+
+<li><a href="http://plusblog.jp/8527/" title="Mac初心者のiPhoneアプリ開発記９ アプリ申請までの道" target="_self"><img src="http://plusblog.jp/wp-content/uploads/2013/07/11-135x80.png" alt="" border="0" width="135" height="80" class="wpp-thumbnail wpp_cached_thumb wpp_featured" /></a> <a href="http://plusblog.jp/8527/" title="Mac初心者のiPhoneアプリ開発記９ アプリ申請までの道">Mac初心者のiPhoneアプリ開発記９ アプリ申請までの道</a> </li>
+
+<li><a href="http://plusblog.jp/11199/" title="Cocos2d-xでiPhone&Androidアプリ開発記７ SQLiteの注意点" target="_self"><img src="http://plusblog.jp/wp-content/uploads/2014/05/SQLite-135x80.png" alt="" border="0" width="135" height="80" class="wpp-thumbnail wpp_cached_thumb wpp_featured" /></a> <a href="http://plusblog.jp/11199/" title="Cocos2d-xでiPhone&Androidアプリ開発記７ SQLiteの注意点">Cocos2d-xでiPhone&Androidアプリ開発記７ SQLiteの注意点</a> </li>
+
+<li><a href="http://plusblog.jp/8151/" title="Mac初心者のiPhoneアプリ開発記７ 設定画面を作る" target="_self"><img src="http://plusblog.jp/wp-content/uploads/2013/06/11-135x80.png" alt="" border="0" width="135" height="80" class="wpp-thumbnail wpp_cached_thumb wpp_featured" /></a> <a href="http://plusblog.jp/8151/" title="Mac初心者のiPhoneアプリ開発記７ 設定画面を作る">Mac初心者のiPhoneアプリ開発記７ 設定画面を作る</a> </li>
+
+<li><a href="http://plusblog.jp/6972/" title="Mac初心者のiPhoneアプリ開発記２ Xcodeの闇の中で" target="_self"><img src="http://plusblog.jp/wp-content/uploads/2013/02/xcode-135x80.jpg" alt="" border="0" width="135" height="80" class="wpp-thumbnail wpp_cached_thumb wpp_featured" /></a> <a href="http://plusblog.jp/6972/" title="Mac初心者のiPhoneアプリ開発記２ Xcodeの闇の中で">Mac初心者のiPhoneアプリ開発記２ Xcodeの闇の中で</a> </li>
+
+<li><a href="http://plusblog.jp/10520/" title="Cocos2d-xでiPhone&Androidアプリ開発記４ AdMobメディエーションでAdMob+iAd iOS編" target="_self"><img src="http://plusblog.jp/wp-content/uploads/2014/03/admob-135x80.jpg" alt="" border="0" width="135" height="80" class="wpp-thumbnail wpp_cached_thumb wpp_featured" /></a> <a href="http://plusblog.jp/10520/" title="Cocos2d-xでiPhone&Androidアプリ開発記４ AdMobメディエーションでAdMob+iAd iOS編">Cocos2d-xでiPhone&Androidアプリ開発記４ AdMobメディエーションでAdMob+iAd iOS編</a> </li>
+
+<li><a href="http://plusblog.jp/7619/" title="Mac初心者のiPhoneアプリ開発記６ 画像処理はじめました" target="_self"><img src="http://plusblog.jp/wp-content/uploads/2013/04/11-135x80.png" alt="" border="0" width="135" height="80" class="wpp-thumbnail wpp_cached_thumb wpp_featured" /></a> <a href="http://plusblog.jp/7619/" title="Mac初心者のiPhoneアプリ開発記６ 画像処理はじめました">Mac初心者のiPhoneアプリ開発記６ 画像処理はじめました</a> </li>
+
+<li><a href="http://plusblog.jp/10800/" title="Cocos2d-xでiPhone&Androidアプリ開発記６ ローカライズとアイコン組み込み" target="_self"><img src="http://plusblog.jp/wp-content/uploads/2014/04/gizmo-135x80.jpg" alt="" border="0" width="135" height="80" class="wpp-thumbnail wpp_cached_thumb wpp_featured" /></a> <a href="http://plusblog.jp/10800/" title="Cocos2d-xでiPhone&Androidアプリ開発記６ ローカライズとアイコン組み込み">Cocos2d-xでiPhone&Androidアプリ開発記６ ローカライズとアイコン組み込み</a> </li>
+
+</ul>
+
+<!-- End Wordpress Popular Posts Plugin v2.3.7 -->
+
+</li>
+
+
+
+<li id="search" class="widget-container widget_search">
+
+<h3 class="widget-title">サイト内検索</h3>
+
+<form action="http://www.google.co.jp/cse" id="cse-search-box">
+
+<div>
+
+<input type="hidden" name="cx" value="partner-pub-6230201288790304:9796066354" />
+
+<input type="hidden" name="ie" value="UTF-8" />
+
+<input type="text" name="q" size="40" /><input type="submit" name="sa" value="Search">
+
+</div>
+
+</form>
+
+<script type="text/javascript" src="http://www.google.co.jp/coop/cse/brand?form=cse-search-box&amp;lang=ja"></script>
+
+</li>
+
+
+
+<li id="categories-2" class="widget-container widget_categories"><h3 class="widget-title">カテゴリー</h3> <ul>
+
+<li class="cat-item cat-item-39"><a href="http://plusblog.jp/category/iphone/" title="iPhone に含まれる投稿をすべて表示">iPhone</a> (36)
+
+<ul class='children'>
+
+<li class="cat-item cat-item-937"><a href="http://plusblog.jp/category/iphone/screenshot-maker-pro/" title="Screenshot Maker Pro に含まれる投稿をすべて表示">Screenshot Maker Pro</a> (5)
+
+</li>
+
+<li class="cat-item cat-item-35"><a href="http://plusblog.jp/category/iphone/ios/" title="iOS に含まれる投稿をすべて表示">iOS</a> (24)
+
+</li>
+
+</ul>
+
+</li>
+
+<li class="cat-item cat-item-40"><a href="http://plusblog.jp/category/nexus7/" title="Nexus7 に含まれる投稿をすべて表示">Nexus7</a> (5)
+
+</li>
+
+<li class="cat-item cat-item-37"><a href="http://plusblog.jp/category/cocos2dx/" title="Cocos2d-x に含まれる投稿をすべて表示">Cocos2d-x</a> (9)
+
+<ul class='children'>
+
+<li class="cat-item cat-item-1509"><a href="http://plusblog.jp/category/cocos2dx/word-gizmo/" title="英単語ギズモ に含まれる投稿をすべて表示">英単語ギズモ</a> (2)
+
+</li>
+
+</ul>
+
+</li>
+
+<li class="cat-item cat-item-5"><a href="http://plusblog.jp/category/web/" title="Web に含まれる投稿をすべて表示">Web</a> (139)
+
+<ul class='children'>
+
+<li class="cat-item cat-item-15"><a href="http://plusblog.jp/category/web/wordpress/" title="ワードプレス に含まれる投稿をすべて表示">ワードプレス</a> (48)
+
+</li>
+
+<li class="cat-item cat-item-30"><a href="http://plusblog.jp/category/web/vps/" title="VPS に含まれる投稿をすべて表示">VPS</a> (11)
+
+</li>
+
+<li class="cat-item cat-item-26"><a href="http://plusblog.jp/category/web/js/" title="JavaScript に含まれる投稿をすべて表示">JavaScript</a> (24)
+
+</li>
+
+<li class="cat-item cat-item-649"><a href="http://plusblog.jp/category/web/jquery/" title="jQuery に含まれる投稿をすべて表示">jQuery</a> (14)
+
+</li>
+
+<li class="cat-item cat-item-27"><a href="http://plusblog.jp/category/web/php/" title="PHP に含まれる投稿をすべて表示">PHP</a> (13)
+
+</li>
+
+<li class="cat-item cat-item-648"><a href="http://plusblog.jp/category/web/css/" title="CSS に含まれる投稿をすべて表示">CSS</a> (6)
+
+</li>
+
+<li class="cat-item cat-item-913"><a href="http://plusblog.jp/category/web/bootstrap/" title="Bootstrap に含まれる投稿をすべて表示">Bootstrap</a> (5)
+
+</li>
+
+<li class="cat-item cat-item-6"><a href="http://plusblog.jp/category/web/affiliate/" title="アフィリエイト に含まれる投稿をすべて表示">アフィリエイト</a> (5)
+
+</li>
+
+<li class="cat-item cat-item-757"><a href="http://plusblog.jp/category/web/blog/" title="ブログ運営 に含まれる投稿をすべて表示">ブログ運営</a> (9)
+
+</li>
+
+</ul>
+
+</li>
+
+<li class="cat-item cat-item-1514"><a href="http://plusblog.jp/category/web-tool/" title="Webツール に含まれる投稿をすべて表示">Webツール</a> (23)
+
+<ul class='children'>
+
+<li class="cat-item cat-item-34"><a href="http://plusblog.jp/category/web-tool/ism/" title="iPhone Screenshot Maker に含まれる投稿をすべて表示">iPhone Screenshot Maker</a> (14)
+
+</li>
+
+<li class="cat-item cat-item-455"><a href="http://plusblog.jp/category/web-tool/chrome/" title="Chrome書記 に含まれる投稿をすべて表示">Chrome書記</a> (1)
+
+</li>
+
+<li class="cat-item cat-item-431"><a href="http://plusblog.jp/category/web-tool/botti/" title="ぼっち英会話 に含まれる投稿をすべて表示">ぼっち英会話</a> (1)
+
+</li>
+
+<li class="cat-item cat-item-623"><a href="http://plusblog.jp/category/web-tool/mandalart/" title="マンダラート に含まれる投稿をすべて表示">マンダラート</a> (2)
+
+</li>
+
+<li class="cat-item cat-item-36"><a href="http://plusblog.jp/category/web-tool/calendar/" title="デザカレ に含まれる投稿をすべて表示">デザカレ</a> (2)
+
+</li>
+
+<li class="cat-item cat-item-632"><a href="http://plusblog.jp/category/web-tool/eyehacker/" title="アイハッカー に含まれる投稿をすべて表示">アイハッカー</a> (1)
+
+</li>
+
+<li class="cat-item cat-item-947"><a href="http://plusblog.jp/category/web-tool/face/" title="顔ツボ辞典 に含まれる投稿をすべて表示">顔ツボ辞典</a> (1)
+
+</li>
+
+<li class="cat-item cat-item-948"><a href="http://plusblog.jp/category/web-tool/picrop/" title="picrop に含まれる投稿をすべて表示">picrop</a> (1)
+
+</li>
+
+</ul>
+
+</li>
+
+<li class="cat-item cat-item-4"><a href="http://plusblog.jp/category/pc/" title="PC に含まれる投稿をすべて表示">PC</a> (27)
+
+</li>
+
+<li class="cat-item cat-item-3"><a href="http://plusblog.jp/category/mac/" title="Mac に含まれる投稿をすべて表示">Mac</a> (27)
+
+</li>
+
+<li class="cat-item cat-item-9"><a href="http://plusblog.jp/category/gadget/" title="ガジェット に含まれる投稿をすべて表示">ガジェット</a> (37)
+
+</li>
+
+<li class="cat-item cat-item-42"><a href="http://plusblog.jp/category/audio/" title="オーディオ に含まれる投稿をすべて表示">オーディオ</a> (6)
+
+</li>
+
+<li class="cat-item cat-item-14"><a href="http://plusblog.jp/category/lifehack/" title="ライフハック に含まれる投稿をすべて表示">ライフハック</a> (157)
+
+<ul class='children'>
+
+<li class="cat-item cat-item-16"><a href="http://plusblog.jp/category/lifehack/work/" title="仕事術 に含まれる投稿をすべて表示">仕事術</a> (28)
+
+</li>
+
+<li class="cat-item cat-item-675"><a href="http://plusblog.jp/category/lifehack/approach/" title="考え方 に含まれる投稿をすべて表示">考え方</a> (27)
+
+</li>
+
+<li class="cat-item cat-item-273"><a href="http://plusblog.jp/category/lifehack/cooking/" title="料理 に含まれる投稿をすべて表示">料理</a> (8)
+
+</li>
+
+<li class="cat-item cat-item-24"><a href="http://plusblog.jp/category/lifehack/thoughts/" title="雑感 に含まれる投稿をすべて表示">雑感</a> (57)
+
+</li>
+
+<li class="cat-item cat-item-720"><a href="http://plusblog.jp/category/lifehack/trivia/" title="雑学 に含まれる投稿をすべて表示">雑学</a> (36)
+
+</li>
+
+<li class="cat-item cat-item-44"><a href="http://plusblog.jp/category/lifehack/aquarium/" title="熱帯魚 に含まれる投稿をすべて表示">熱帯魚</a> (7)
+
+</li>
+
+</ul>
+
+</li>
+
+<li class="cat-item cat-item-32"><a href="http://plusblog.jp/category/idea/" title="アイデア に含まれる投稿をすべて表示">アイデア</a> (91)
+
+</li>
+
+<li class="cat-item cat-item-10"><a href="http://plusblog.jp/category/game/" title="ゲーム に含まれる投稿をすべて表示">ゲーム</a> (37)
+
+</li>
+
+<li class="cat-item cat-item-11"><a href="http://plusblog.jp/category/science/" title="サイエンス に含まれる投稿をすべて表示">サイエンス</a> (50)
+
+</li>
+
+<li class="cat-item cat-item-12"><a href="http://plusblog.jp/category/spiritual/" title="スピリチュアル に含まれる投稿をすべて表示">スピリチュアル</a> (24)
+
+</li>
+
+<li class="cat-item cat-item-13"><a href="http://plusblog.jp/category/design/" title="デザイン に含まれる投稿をすべて表示">デザイン</a> (156)
+
+<ul class='children'>
+
+<li class="cat-item cat-item-19"><a href="http://plusblog.jp/category/design/wallpaper/" title="壁紙 に含まれる投稿をすべて表示">壁紙</a> (64)
+
+</li>
+
+</ul>
+
+</li>
+
+<li class="cat-item cat-item-17"><a href="http://plusblog.jp/category/photo/" title="写真 に含まれる投稿をすべて表示">写真</a> (175)
+
+<ul class='children'>
+
+<li class="cat-item cat-item-1330"><a href="http://plusblog.jp/category/photo/nz/" title="ニュージーランド に含まれる投稿をすべて表示">ニュージーランド</a> (46)
+
+</li>
+
+<li class="cat-item cat-item-65"><a href="http://plusblog.jp/category/photo/animal-photo/" title="動物 に含まれる投稿をすべて表示">動物</a> (15)
+
+</li>
+
+<li class="cat-item cat-item-285"><a href="http://plusblog.jp/category/photo/nature/" title="自然 に含まれる投稿をすべて表示">自然</a> (13)
+
+</li>
+
+</ul>
+
+</li>
+
+<li class="cat-item cat-item-43"><a href="http://plusblog.jp/category/cg/" title="CG に含まれる投稿をすべて表示">CG</a> (45)
+
+</li>
+
+<li class="cat-item cat-item-7"><a href="http://plusblog.jp/category/art/" title="アート に含まれる投稿をすべて表示">アート</a> (181)
+
+<ul class='children'>
+
+<li class="cat-item cat-item-8"><a href="http://plusblog.jp/category/art/illustration/" title="イラスト に含まれる投稿をすべて表示">イラスト</a> (63)
+
+</li>
+
+</ul>
+
+</li>
+
+<li class="cat-item cat-item-25"><a href="http://plusblog.jp/category/music/" title="音楽 に含まれる投稿をすべて表示">音楽</a> (29)
+
+<ul class='children'>
+
+<li class="cat-item cat-item-353"><a href="http://plusblog.jp/category/music/pv/" title="PV に含まれる投稿をすべて表示">PV</a> (10)
+
+</li>
+
+</ul>
+
+</li>
+
+<li class="cat-item cat-item-20"><a href="http://plusblog.jp/category/film/" title="映画 に含まれる投稿をすべて表示">映画</a> (69)
+
+</li>
+
+<li class="cat-item cat-item-21"><a href="http://plusblog.jp/category/book/" title="本 に含まれる投稿をすべて表示">本</a> (34)
+
+</li>
+
+<li class="cat-item cat-item-41"><a href="http://plusblog.jp/category/goods/" title="雑貨 に含まれる投稿をすべて表示">雑貨</a> (51)
+
+</li>
+
+<li class="cat-item cat-item-22"><a href="http://plusblog.jp/category/interesting/" title="おもしろ に含まれる投稿をすべて表示">おもしろ</a> (337)
+
+<ul class='children'>
+
+<li class="cat-item cat-item-168"><a href="http://plusblog.jp/category/interesting/cute/" title="かわいい に含まれる投稿をすべて表示">かわいい</a> (52)
+
+</li>
+
+<li class="cat-item cat-item-45"><a href="http://plusblog.jp/category/interesting/calm/" title="なごむ に含まれる投稿をすべて表示">なごむ</a> (34)
+
+</li>
+
+<li class="cat-item cat-item-139"><a href="http://plusblog.jp/category/interesting/cool/" title="カッコイイ に含まれる投稿をすべて表示">カッコイイ</a> (54)
+
+</li>
+
+<li class="cat-item cat-item-376"><a href="http://plusblog.jp/category/interesting/surrealism/" title="シュール に含まれる投稿をすべて表示">シュール</a> (48)
+
+</li>
+
+<li class="cat-item cat-item-109"><a href="http://plusblog.jp/category/interesting/black/" title="ブラック に含まれる投稿をすべて表示">ブラック</a> (13)
+
+</li>
+
+<li class="cat-item cat-item-46"><a href="http://plusblog.jp/category/interesting/animal/" title="動物 に含まれる投稿をすべて表示">動物</a> (51)
+
+</li>
+
+<li class="cat-item cat-item-58"><a href="http://plusblog.jp/category/interesting/fear/" title="怖い に含まれる投稿をすべて表示">怖い</a> (22)
+
+</li>
+
+<li class="cat-item cat-item-84"><a href="http://plusblog.jp/category/interesting/impressed/" title="感動 に含まれる投稿をすべて表示">感動</a> (14)
+
+</li>
+
+<li class="cat-item cat-item-89"><a href="http://plusblog.jp/category/interesting/nostalgic/" title="懐かしい に含まれる投稿をすべて表示">懐かしい</a> (24)
+
+</li>
+
+<li class="cat-item cat-item-47"><a href="http://plusblog.jp/category/interesting/funny/" title="笑える に含まれる投稿をすべて表示">笑える</a> (123)
+
+</li>
+
+<li class="cat-item cat-item-48"><a href="http://plusblog.jp/category/interesting/surprise/" title="驚く に含まれる投稿をすべて表示">驚く</a> (68)
+
+</li>
+
+</ul>
+
+</li>
+
+</ul>
+
+</li>
+
+<li id="fixed_target" class="widget-container sidepp accesstop">
+
+<div style="margin-bottom: 10px;">
+
+<!-- Rakuten Widget FROM HERE --><script type="text/javascript">rakuten_design="slide";rakuten_affiliateId="0a37a63a.760deecf.0a71df20.1fc57b3b";rakuten_items="ctsmatch";rakuten_genreId=0;rakuten_size="336x280";rakuten_target="_blank";rakuten_theme="gray";rakuten_border="off";rakuten_auto_mode="off";rakuten_genre_title="off";rakuten_recommend="on";</script><script type="text/javascript" src="http://xml.affiliate.rakuten.co.jp/widget/js/rakuten_widget.js"></script><!-- Rakuten Widget TO HERE -->
+
+</div>
+
+<div style="margin-bottom: 10px;">
+
+<iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fplusblog.jp&amp;width=336&amp;height=332&amp;colorscheme=light&amp;show_faces=true&amp;border_color=%23315c99&amp;stream=false&amp;header=true&amp;appId=178850692211440" scrolling="no" frameborder="0" style="overflow:hidden; width:336px; height:332px; background-color:white;" class="facebook" allowTransparency="true"></iframe>
+
+</div>
+
+<div id="side_follow">
+
+<a href="https://twitter.com/intent/follow?original_referer=http%3A%2F%2Fplusblog.jp%2F&region=follow_link&screen_name=plustakk&tw_p=followbutton&variant=2.0" target="_blank" class="twitter"></a>
+
+<a href="https://www.facebook.com/plusblog.jp" target="_blank" class="facebook"></a>
+
+<a href="http://cloud.feedly.com/#subscription%2Ffeed%2Fhttp%3A%2F%2Fplusblog.jp%2Ffeed%2F" target="_blank" class="feedly"></a>
+
+</div>
+
+</li>
+
+
+
+</ul>
+
+</div><!-- #primary .widget-area -->
+
+
+
+
+
+
+
+
+
+</div><!-- #main -->
+
+
+
+<div id="footer" role="contentinfo">
+
+<div id="footer_inner">
+
+
+
+<div id="footer_top"></div>
+
+<div id="colophon">
+
+
+
+<div id="footer-widget-area" role="complementary">
+
+
+
+<div id="first" class="widget-area">
+
+<ul class="xoxo">
+
+<li id="archives-2" class="widget-container widget_archive"><h3 class="widget-title">アーカイブ</h3> <ul>
+
+<li><a href='http://plusblog.jp/date/2014/08/'>2014年8月</a>&nbsp;(5)</li>
+
+<li><a href='http://plusblog.jp/date/2014/07/'>2014年7月</a>&nbsp;(31)</li>
+
+<li><a href='http://plusblog.jp/date/2014/06/'>2014年6月</a>&nbsp;(30)</li>
+
+<li><a href='http://plusblog.jp/date/2014/05/'>2014年5月</a>&nbsp;(31)</li>
+
+<li><a href='http://plusblog.jp/date/2014/04/'>2014年4月</a>&nbsp;(30)</li>
+
+<li><a href='http://plusblog.jp/date/2014/03/'>2014年3月</a>&nbsp;(31)</li>
+
+<li><a href='http://plusblog.jp/date/2014/02/'>2014年2月</a>&nbsp;(28)</li>
+
+<li><a href='http://plusblog.jp/date/2014/01/'>2014年1月</a>&nbsp;(31)</li>
+
+<li><a href='http://plusblog.jp/date/2013/12/'>2013年12月</a>&nbsp;(31)</li>
+
+<li><a href='http://plusblog.jp/date/2013/11/'>2013年11月</a>&nbsp;(30)</li>
+
+<li><a href='http://plusblog.jp/date/2013/10/'>2013年10月</a>&nbsp;(31)</li>
+
+<li><a href='http://plusblog.jp/date/2013/09/'>2013年9月</a>&nbsp;(30)</li>
+
+<li><a href='http://plusblog.jp/date/2013/08/'>2013年8月</a>&nbsp;(31)</li>
+
+<li><a href='http://plusblog.jp/date/2013/07/'>2013年7月</a>&nbsp;(31)</li>
+
+<li><a href='http://plusblog.jp/date/2013/06/'>2013年6月</a>&nbsp;(30)</li>
+
+<li><a href='http://plusblog.jp/date/2013/05/'>2013年5月</a>&nbsp;(31)</li>
+
+<li><a href='http://plusblog.jp/date/2013/04/'>2013年4月</a>&nbsp;(30)</li>
+
+<li><a href='http://plusblog.jp/date/2013/03/'>2013年3月</a>&nbsp;(42)</li>
+
+<li><a href='http://plusblog.jp/date/2013/02/'>2013年2月</a>&nbsp;(28)</li>
+
+<li><a href='http://plusblog.jp/date/2013/01/'>2013年1月</a>&nbsp;(31)</li>
+
+<li><a href='http://plusblog.jp/date/2012/12/'>2012年12月</a>&nbsp;(31)</li>
+
+<li><a href='http://plusblog.jp/date/2012/11/'>2012年11月</a>&nbsp;(31)</li>
+
+<li><a href='http://plusblog.jp/date/2012/10/'>2012年10月</a>&nbsp;(31)</li>
+
+<li><a href='http://plusblog.jp/date/2012/09/'>2012年9月</a>&nbsp;(30)</li>
+
+<li><a href='http://plusblog.jp/date/2012/08/'>2012年8月</a>&nbsp;(31)</li>
+
+<li><a href='http://plusblog.jp/date/2012/07/'>2012年7月</a>&nbsp;(30)</li>
+
+<li><a href='http://plusblog.jp/date/2012/06/'>2012年6月</a>&nbsp;(30)</li>
+
+<li><a href='http://plusblog.jp/date/2012/05/'>2012年5月</a>&nbsp;(31)</li>
+
+<li><a href='http://plusblog.jp/date/2012/04/'>2012年4月</a>&nbsp;(31)</li>
+
+<li><a href='http://plusblog.jp/date/2012/03/'>2012年3月</a>&nbsp;(31)</li>
+
+<li><a href='http://plusblog.jp/date/2012/02/'>2012年2月</a>&nbsp;(32)</li>
+
+<li><a href='http://plusblog.jp/date/2012/01/'>2012年1月</a>&nbsp;(31)</li>
+
+<li><a href='http://plusblog.jp/date/2011/12/'>2011年12月</a>&nbsp;(46)</li>
+
+</ul>
+
+</li> </ul>
+
+</div><!-- #first .widget-area -->
+
+
+
+<div id="second" class="widget-area">
+
+<ul class="xoxo">
+
+<li id="text-3" class="widget-container widget_text"><h3 class="widget-title">はてな人気ランキング</h3> <div class="textwidget"><div id="hatena_ranking"></div>
+
+<script type="text/javascript">
+
+jQuery(function(){
+
+var siteurl = 'http://plusblog.jp/';
+
+jQuery.ajax({
+
+dataType: "jsonp", cache: true, data: {'sort':'count', 'url':siteurl},
+
+url: "http://b.hatena.ne.jp/entrylist/json",
+
+success: function(data){
+
+var o = '';
+
+jQuery.each(data, function(i,item){
+
+if(item.link != siteurl) {
+
+o += '<li>';
+
+item.title = item.title.replace(/ \|.*$/,'');
+
+item.title = item.title.replace(/ \–.*$/,'');
+
+o += '<a href="'+item.link+'">'+item.title+'</a> ';
+
+o += '<a href="http://b.hatena.ne.jp/entry/' + item.link + '" target="_blank"><img src="http://b.hatena.ne.jp/entry/image/small/'+item.link+'" style="vertical-align:middle"/></a>';
+
+o += '</li>';
+
+}
+
+});
+
+jQuery('#hatena_ranking').append('<ol>'+o+'</ol>');
+
+}
+
+});
+
+});
+
+</script></div>
+
+</li><li id="text-4" class="widget-container widget_text"><h3 class="widget-title">Advertisement</h3> <div class="textwidget"><ul class="link">
+
+<li class="cat-item"><a href="http://aquaspot.in/" target="_blank">水宅配比較</a></li>
+
+<li class="cat-item"><a href="http://xn--e-lb9b083j.biz/" target="_blank">青汁比較</a></li>
+
+</ul></div>
+
+</li> </ul>
+
+</div><!-- #second .widget-area -->
+
+
+
+<div id="third" class="widget-area">
+
+<ul class="xoxo">
+
+<li id="tag_cloud-2" class="widget-container widget_tag_cloud"><h3 class="widget-title">タグクラウド</h3><div class="tagcloud"><a href='http://plusblog.jp/tag/3d/' class='tag-link-290' title='21件のトピック' style='font-size: 16.09375pt;'>3D</a>
+
+<a href='http://plusblog.jp/tag/android/' class='tag-link-114' title='3件のトピック' style='font-size: 8pt;'>Android</a>
+
+<a href='http://plusblog.jp/tag/bluetooth/' class='tag-link-447' title='3件のトピック' style='font-size: 8pt;'>Bluetooth</a>
+
+<a href='http://plusblog.jp/tag/cd/' class='tag-link-83' title='3件のトピック' style='font-size: 8pt;'>CD</a>
+
+<a href='http://plusblog.jp/tag/diy/' class='tag-link-105' title='6件のトピック' style='font-size: 10.734375pt;'>DIY</a>
+
+<a href='http://plusblog.jp/tag/gif/' class='tag-link-111' title='74件のトピック' style='font-size: 22pt;'>GIF</a>
+
+<a href='http://plusblog.jp/tag/google/' class='tag-link-576' title='8件のトピック' style='font-size: 11.828125pt;'>Google</a>
+
+<a href='http://plusblog.jp/tag/led/' class='tag-link-428' title='3件のトピック' style='font-size: 8pt;'>LED</a>
+
+<a href='http://plusblog.jp/tag/objective-c/' class='tag-link-150' title='4件のトピック' style='font-size: 9.09375pt;'>Objective-C</a>
+
+<a href='http://plusblog.jp/tag/sf/' class='tag-link-78' title='7件のトピック' style='font-size: 11.28125pt;'>SF</a>
+
+<a href='http://plusblog.jp/tag/tumblr/' class='tag-link-334' title='5件のトピック' style='font-size: 9.96875pt;'>Tumblr</a>
+
+<a href='http://plusblog.jp/tag/twitter/' class='tag-link-767' title='18件のトピック' style='font-size: 15.4375pt;'>Twitter</a>
+
+<a href='http://plusblog.jp/tag/ufo/' class='tag-link-500' title='3件のトピック' style='font-size: 8pt;'>UFO</a>
+
+<a href='http://plusblog.jp/tag/ui/' class='tag-link-654' title='4件のトピック' style='font-size: 9.09375pt;'>UI</a>
+
+<a href='http://plusblog.jp/tag/youtube/' class='tag-link-132' title='3件のトピック' style='font-size: 8pt;'>YouTube</a>
+
+<a href='http://plusblog.jp/tag/%e3%81%be%e3%81%a8%e3%82%81/' class='tag-link-265' title='36件のトピック' style='font-size: 18.609375pt;'>まとめ</a>
+
+<a href='http://plusblog.jp/tag/%e3%81%bf%e3%83%bc/' class='tag-link-773' title='4件のトピック' style='font-size: 9.09375pt;'>みー</a>
+
+<a href='http://plusblog.jp/tag/%e3%82%a2%e3%82%af%e3%82%bb%e3%82%b9/' class='tag-link-263' title='3件のトピック' style='font-size: 8pt;'>アクセス</a>
+
+<a href='http://plusblog.jp/tag/%e3%82%a2%e3%83%8b%e3%83%a1/' class='tag-link-209' title='7件のトピック' style='font-size: 11.28125pt;'>アニメ</a>
+
+<a href='http://plusblog.jp/tag/%e3%82%a4%e3%83%a9%e3%83%83%e3%81%a8%e3%81%99%e3%82%8b%e9%81%93%e5%85%b7/' class='tag-link-126' title='3件のトピック' style='font-size: 8pt;'>イラッとする道具</a>
+
+<a href='http://plusblog.jp/tag/%e3%82%a8%e3%83%b4%e3%82%a1/' class='tag-link-775' title='5件のトピック' style='font-size: 9.96875pt;'>エヴァ</a>
+
+<a href='http://plusblog.jp/tag/%e3%82%ab%e3%83%a1%e3%83%a9/' class='tag-link-338' title='9件のトピック' style='font-size: 12.375pt;'>カメラ</a>
+
+<a href='http://plusblog.jp/tag/%e3%82%ab%e3%83%ac%e3%83%b3%e3%83%80%e3%83%bc/' class='tag-link-524' title='4件のトピック' style='font-size: 9.09375pt;'>カレンダー</a>
+
+<a href='http://plusblog.jp/tag/%e3%82%ac%e3%83%a9%e3%82%b9/' class='tag-link-60' title='3件のトピック' style='font-size: 8pt;'>ガラス</a>
+
+<a href='http://plusblog.jp/tag/%e3%82%af%e3%83%aa%e3%82%b9%e3%83%9e%e3%82%b9/' class='tag-link-269' title='3件のトピック' style='font-size: 8pt;'>クリスマス</a>
+
+<a href='http://plusblog.jp/tag/%e3%82%b3%e3%83%a9/' class='tag-link-123' title='11件のトピック' style='font-size: 13.25pt;'>コラ</a>
+
+<a href='http://plusblog.jp/tag/%e3%82%b7%e3%83%a0%e3%82%b7%e3%83%86%e3%82%a3/' class='tag-link-369' title='3件のトピック' style='font-size: 8pt;'>シムシティ</a>
+
+<a href='http://plusblog.jp/tag/%e3%82%b7%e3%83%a7%e3%83%bc%e3%83%88%e3%82%b3%e3%83%bc%e3%83%89/' class='tag-link-1038' title='7件のトピック' style='font-size: 11.28125pt;'>ショートコード</a>
+
+<a href='http://plusblog.jp/tag/%e3%82%b7%e3%83%b3%e3%83%97%e3%83%ab/' class='tag-link-489' title='5件のトピック' style='font-size: 9.96875pt;'>シンプル</a>
+
+<a href='http://plusblog.jp/tag/%e3%82%b8%e3%82%aa%e3%83%a9%e3%83%9e/' class='tag-link-174' title='5件のトピック' style='font-size: 9.96875pt;'>ジオラマ</a>
+
+<a href='http://plusblog.jp/tag/%e3%82%b9%e3%82%bf%e3%83%bc%e3%83%88%e3%83%ac%e3%83%83%e3%82%af/' class='tag-link-188' title='4件のトピック' style='font-size: 9.09375pt;'>スタートレック</a>
+
+<a href='http://plusblog.jp/tag/%e3%82%b9%e3%83%882/' class='tag-link-531' title='3件のトピック' style='font-size: 8pt;'>スト2</a>
+
+<a href='http://plusblog.jp/tag/%e3%82%b9%e3%83%88%e3%83%aa%e3%83%bc%e3%83%88%e3%82%a2%e3%83%bc%e3%83%88/' class='tag-link-316' title='3件のトピック' style='font-size: 8pt;'>ストリートアート</a>
+
+<a href='http://plusblog.jp/tag/%e3%82%b9%e3%83%91%e3%82%a4/' class='tag-link-547' title='4件のトピック' style='font-size: 9.09375pt;'>スパイ</a>
+
+<a href='http://plusblog.jp/tag/%e3%82%b9%e3%83%9d%e3%83%bc%e3%83%84/' class='tag-link-539' title='3件のトピック' style='font-size: 8pt;'>スポーツ</a>
+
+<a href='http://plusblog.jp/tag/%e3%82%b9%e3%83%bc%e3%83%91%e3%83%bc%e3%83%9e%e3%83%aa%e3%82%aa/' class='tag-link-379' title='3件のトピック' style='font-size: 8pt;'>スーパーマリオ</a>
+
+<a href='http://plusblog.jp/tag/%e3%82%bb%e3%83%ac%e3%83%96/' class='tag-link-129' title='4件のトピック' style='font-size: 9.09375pt;'>セレブ</a>
+
+<a href='http://plusblog.jp/tag/%e3%82%bf%e3%82%a4/' class='tag-link-1301' title='4件のトピック' style='font-size: 9.09375pt;'>タイ</a>
+
+<a href='http://plusblog.jp/tag/%e3%83%81%e3%83%a5%e3%83%bc%e3%83%88%e3%83%aa%e3%82%a2%e3%83%ab/' class='tag-link-134' title='4件のトピック' style='font-size: 9.09375pt;'>チュートリアル</a>
+
+<a href='http://plusblog.jp/tag/%e3%83%81%e3%83%ab%e3%83%88%e3%82%b7%e3%83%95%e3%83%88/' class='tag-link-543' title='4件のトピック' style='font-size: 9.09375pt;'>チルトシフト</a>
+
+<a href='http://plusblog.jp/tag/%e3%83%84%e3%82%a4%e3%83%b3%e3%83%bb%e3%83%94%e3%83%bc%e3%82%af%e3%82%b9/' class='tag-link-332' title='3件のトピック' style='font-size: 8pt;'>ツイン・ピークス</a>
+
+<a href='http://plusblog.jp/tag/%e3%83%88%e3%83%ac%e3%83%b3%e3%83%89bot/' class='tag-link-766' title='5件のトピック' style='font-size: 9.96875pt;'>トレンドbot</a>
+
+<a href='http://plusblog.jp/tag/%e3%83%89%e3%82%a4%e3%83%84/' class='tag-link-94' title='5件のトピック' style='font-size: 9.96875pt;'>ドイツ</a>
+
+<a href='http://plusblog.jp/tag/%e3%83%89%e3%83%83%e3%83%88%e7%b5%b5/' class='tag-link-532' title='4件のトピック' style='font-size: 9.09375pt;'>ドット絵</a>
+
+<a href='http://plusblog.jp/tag/%e3%83%8a%e3%82%b7%e3%83%a7%e3%83%8a%e3%83%ab%e3%82%b8%e3%82%aa%e3%82%b0%e3%83%a9%e3%83%95%e3%82%a3%e3%83%83%e3%82%af/' class='tag-link-101' title='3件のトピック' style='font-size: 8pt;'>ナショナルジオグラフィック</a>
+
+<a href='http://plusblog.jp/tag/%e3%83%8d%e3%82%ac%e3%83%86%e3%82%a3%e3%83%96%e3%82%b9%e3%83%9a%e3%83%bc%e3%82%b9/' class='tag-link-569' title='3件のトピック' style='font-size: 8pt;'>ネガティブスペース</a>
+
+<a href='http://plusblog.jp/tag/%e3%83%8d%e3%82%b3/' class='tag-link-108' title='33件のトピック' style='font-size: 18.171875pt;'>ネコ</a>
+
+<a href='http://plusblog.jp/tag/%e3%83%90%e3%82%a4%e3%83%a9%e3%83%ab/' class='tag-link-593' title='4件のトピック' style='font-size: 9.09375pt;'>バイラル</a>
+
+<a href='http://plusblog.jp/tag/%e3%83%90%e3%83%ad%e3%83%b3/' class='tag-link-730' title='5件のトピック' style='font-size: 9.96875pt;'>バロン</a>
+
+<a href='http://plusblog.jp/tag/%e3%83%95%e3%82%a1%e3%83%83%e3%82%b7%e3%83%a7%e3%83%b3/' class='tag-link-560' title='4件のトピック' style='font-size: 9.09375pt;'>ファッション</a>
+
+<a href='http://plusblog.jp/tag/%e3%83%95%e3%82%a1%e3%83%9f%e3%82%b3%e3%83%b3/' class='tag-link-87' title='5件のトピック' style='font-size: 9.96875pt;'>ファミコン</a>
+
+<a href='http://plusblog.jp/tag/%e3%83%97%e3%83%a9%e3%82%b0%e3%82%a4%e3%83%b3/' class='tag-link-921' title='15件のトピック' style='font-size: 14.5625pt;'>プラグイン</a>
+
+<a href='http://plusblog.jp/tag/%e3%83%9a%e3%83%83%e3%83%88/' class='tag-link-774' title='5件のトピック' style='font-size: 9.96875pt;'>ペット</a>
+
+<a href='http://plusblog.jp/tag/%e3%83%9c%e3%82%b1%e3%81%a6/' class='tag-link-509' title='13件のトピック' style='font-size: 14.015625pt;'>ボケて</a>
+
+<a href='http://plusblog.jp/tag/%e3%83%9d%e3%82%b9%e3%82%bf%e3%83%bc/' class='tag-link-1203' title='4件のトピック' style='font-size: 9.09375pt;'>ポスター</a>
+
+<a href='http://plusblog.jp/tag/%e3%83%9d%e3%83%aa%e3%82%b4%e3%83%b3/' class='tag-link-197' title='5件のトピック' style='font-size: 9.96875pt;'>ポリゴン</a>
+
+<a href='http://plusblog.jp/tag/%e3%83%9d%e3%83%bc%e3%83%88%e3%83%ac%e3%82%a4%e3%83%88/' class='tag-link-175' title='4件のトピック' style='font-size: 9.09375pt;'>ポートレイト</a>
+
+<a href='http://plusblog.jp/tag/%e3%83%9d%e3%83%bc%e3%83%a9%e3%83%b3%e3%83%89/' class='tag-link-103' title='3件のトピック' style='font-size: 8pt;'>ポーランド</a>
+
+<a href='http://plusblog.jp/tag/%e3%83%9e%e3%82%a4%e3%82%b1%e3%83%ab/' class='tag-link-381' title='3件のトピック' style='font-size: 8pt;'>マイケル</a>
+
+<a href='http://plusblog.jp/tag/%e3%83%9e%e3%82%af%e3%83%ad/' class='tag-link-1266' title='4件のトピック' style='font-size: 9.09375pt;'>マクロ</a>
+
+<a href='http://plusblog.jp/tag/%e3%83%9e%e3%83%b3%e3%83%80%e3%83%a9/' class='tag-link-154' title='3件のトピック' style='font-size: 8pt;'>マンダラ</a>
+
+<a href='http://plusblog.jp/tag/%e3%83%a2%e3%83%81%e3%83%99%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3/' class='tag-link-747' title='6件のトピック' style='font-size: 10.734375pt;'>モチベーション</a>
+
+<a href='http://plusblog.jp/tag/%e3%83%a9%e3%82%a4%e3%83%88/' class='tag-link-461' title='3件のトピック' style='font-size: 8pt;'>ライト</a>
+
+<a href='http://plusblog.jp/tag/%e3%83%aa%e3%83%b3%e3%82%b0/' class='tag-link-594' title='4件のトピック' style='font-size: 9.09375pt;'>リング</a>
+
+<a href='http://plusblog.jp/tag/%e3%83%ac%e3%82%b4/' class='tag-link-482' title='3件のトピック' style='font-size: 8pt;'>レゴ</a>
+
+<a href='http://plusblog.jp/tag/%e3%83%ad%e3%82%b4/' class='tag-link-634' title='7件のトピック' style='font-size: 11.28125pt;'>ロゴ</a>
+
+<a href='http://plusblog.jp/tag/%e3%83%ad%e3%82%b7%e3%82%a2/' class='tag-link-1331' title='6件のトピック' style='font-size: 10.734375pt;'>ロシア</a>
+
+<a href='http://plusblog.jp/tag/%e3%83%ad%e3%83%83%e3%82%af%e3%82%b9%e3%83%9f%e3%82%b9/' class='tag-link-364' title='3件のトピック' style='font-size: 8pt;'>ロックスミス</a>
+
+<a href='http://plusblog.jp/tag/%e3%83%ad%e3%83%bc%e3%82%ab%e3%83%a9%e3%82%a4%e3%82%ba/' class='tag-link-74' title='3件のトピック' style='font-size: 8pt;'>ローカライズ</a>
+
+<a href='http://plusblog.jp/tag/%e4%bb%8f%e6%95%99/' class='tag-link-257' title='4件のトピック' style='font-size: 9.09375pt;'>仏教</a>
+
+<a href='http://plusblog.jp/tag/%e4%bf%ae%e7%90%86/' class='tag-link-192' title='5件のトピック' style='font-size: 9.96875pt;'>修理</a>
+
+<a href='http://plusblog.jp/tag/%e5%86%99%e7%9c%9f%e5%90%88%e6%88%90/' class='tag-link-71' title='9件のトピック' style='font-size: 12.375pt;'>写真合成</a>
+
+<a href='http://plusblog.jp/tag/%e5%8b%95%e7%89%a9%e5%9c%92/' class='tag-link-62' title='3件のトピック' style='font-size: 8pt;'>動物園</a>
+
+<a href='http://plusblog.jp/tag/%e5%90%8d%e5%8f%a4%e5%b1%8b/' class='tag-link-702' title='5件のトピック' style='font-size: 9.96875pt;'>名古屋</a>
+
+<a href='http://plusblog.jp/tag/%e5%90%8d%e8%a8%80/' class='tag-link-770' title='5件のトピック' style='font-size: 9.96875pt;'>名言</a>
+
+<a href='http://plusblog.jp/tag/%e5%a4%89%e5%8c%96/' class='tag-link-586' title='3件のトピック' style='font-size: 8pt;'>変化</a>
+
+<a href='http://plusblog.jp/tag/%e5%a4%b1%e6%95%97/' class='tag-link-341' title='3件のトピック' style='font-size: 8pt;'>失敗</a>
+
+<a href='http://plusblog.jp/tag/%e5%ad%90%e4%be%9b/' class='tag-link-310' title='3件のトピック' style='font-size: 8pt;'>子供</a>
+
+<a href='http://plusblog.jp/tag/%e5%ae%87%e5%ae%99/' class='tag-link-148' title='6件のトピック' style='font-size: 10.734375pt;'>宇宙</a>
+
+<a href='http://plusblog.jp/tag/%e5%ae%97%e6%95%99/' class='tag-link-76' title='3件のトピック' style='font-size: 8pt;'>宗教</a>
+
+<a href='http://plusblog.jp/tag/%e5%ba%83%e5%91%8a/' class='tag-link-347' title='7件のトピック' style='font-size: 11.28125pt;'>広告</a>
+
+<a href='http://plusblog.jp/tag/%e5%bd%ab%e5%88%bb/' class='tag-link-336' title='5件のトピック' style='font-size: 9.96875pt;'>彫刻</a>
+
+<a href='http://plusblog.jp/tag/%e6%8c%87%e8%bc%aa/' class='tag-link-598' title='4件のトピック' style='font-size: 9.09375pt;'>指輪</a>
+
+<a href='http://plusblog.jp/tag/%e6%8d%a8%e3%81%a6%e7%8a%ac/' class='tag-link-85' title='4件のトピック' style='font-size: 9.09375pt;'>捨て犬</a>
+
+<a href='http://plusblog.jp/tag/%e6%97%a5%e5%b8%b8/' class='tag-link-325' title='3件のトピック' style='font-size: 8pt;'>日常</a>
+
+<a href='http://plusblog.jp/tag/%e6%99%82%e8%a8%88/' class='tag-link-294' title='6件のトピック' style='font-size: 10.734375pt;'>時計</a>
+
+<a href='http://plusblog.jp/tag/%e6%9c%80%e5%b0%8f/' class='tag-link-92' title='3件のトピック' style='font-size: 8pt;'>最小</a>
+
+<a href='http://plusblog.jp/tag/%e6%9c%aa%e6%9d%a5/' class='tag-link-1285' title='5件のトピック' style='font-size: 9.96875pt;'>未来</a>
+
+<a href='http://plusblog.jp/tag/%e6%a3%ae/' class='tag-link-537' title='3件のトピック' style='font-size: 8pt;'>森</a>
+
+<a href='http://plusblog.jp/tag/%e6%ad%a3%e6%9c%88/' class='tag-link-746' title='4件のトピック' style='font-size: 9.09375pt;'>正月</a>
+
+<a href='http://plusblog.jp/tag/%e6%af%94%e8%bc%83/' class='tag-link-417' title='3件のトピック' style='font-size: 8pt;'>比較</a>
+
+<a href='http://plusblog.jp/tag/%e6%b2%b9%e7%b5%b5/' class='tag-link-541' title='6件のトピック' style='font-size: 10.734375pt;'>油絵</a>
+
+<a href='http://plusblog.jp/tag/%e6%b5%b7%e5%a4%96/' class='tag-link-359' title='3件のトピック' style='font-size: 8pt;'>海外</a>
+
+<a href='http://plusblog.jp/tag/%e6%bc%ab%e7%94%bb/' class='tag-link-386' title='4件のトピック' style='font-size: 9.09375pt;'>漫画</a>
+
+<a href='http://plusblog.jp/tag/%e7%85%a7%e6%98%8e/' class='tag-link-124' title='6件のトピック' style='font-size: 10.734375pt;'>照明</a>
+
+<a href='http://plusblog.jp/tag/%e7%8a%ac/' class='tag-link-86' title='15件のトピック' style='font-size: 14.5625pt;'>犬</a>
+
+<a href='http://plusblog.jp/tag/%e7%90%86%e7%b3%bb/' class='tag-link-414' title='3件のトピック' style='font-size: 8pt;'>理系</a>
+
+<a href='http://plusblog.jp/tag/%e7%94%bb%e5%83%8f%e5%87%a6%e7%90%86/' class='tag-link-528' title='4件のトピック' style='font-size: 9.09375pt;'>画像処理</a>
+
+<a href='http://plusblog.jp/tag/%e7%99%bd%e9%bb%92/' class='tag-link-66' title='24件のトピック' style='font-size: 16.75pt;'>白黒</a>
+
+<a href='http://plusblog.jp/tag/%e7%9a%ae%e8%82%89/' class='tag-link-542' title='5件のトピック' style='font-size: 9.96875pt;'>皮肉</a>
+
+<a href='http://plusblog.jp/tag/%e7%a7%a9%e5%ba%8f/' class='tag-link-117' title='3件のトピック' style='font-size: 8pt;'>秩序</a>
+
+<a href='http://plusblog.jp/tag/%e7%a9%ba/' class='tag-link-260' title='3件のトピック' style='font-size: 8pt;'>空</a>
+
+<a href='http://plusblog.jp/tag/%e7%b4%99/' class='tag-link-591' title='4件のトピック' style='font-size: 9.09375pt;'>紙</a>
+
+<a href='http://plusblog.jp/tag/%e7%b5%90%e6%99%b6/' class='tag-link-1220' title='4件のトピック' style='font-size: 9.09375pt;'>結晶</a>
+
+<a href='http://plusblog.jp/tag/%e8%87%aa%e7%84%b6/' class='tag-link-256' title='4件のトピック' style='font-size: 9.09375pt;'>自然</a>
+
+<a href='http://plusblog.jp/tag/%e8%87%aa%e8%bb%a2%e8%bb%8a/' class='tag-link-437' title='4件のトピック' style='font-size: 9.09375pt;'>自転車</a>
+
+<a href='http://plusblog.jp/tag/%e8%88%aa%e7%a9%ba%e5%86%99%e7%9c%9f/' class='tag-link-96' title='3件のトピック' style='font-size: 8pt;'>航空写真</a>
+
+<a href='http://plusblog.jp/tag/%e8%8a%b1/' class='tag-link-155' title='14件のトピック' style='font-size: 14.34375pt;'>花</a>
+
+<a href='http://plusblog.jp/tag/%e8%91%89/' class='tag-link-511' title='4件のトピック' style='font-size: 9.09375pt;'>葉</a>
+
+<a href='http://plusblog.jp/tag/%e8%a1%9b%e6%98%9f%e5%86%99%e7%9c%9f/' class='tag-link-116' title='3件のトピック' style='font-size: 8pt;'>衛星写真</a>
+
+<a href='http://plusblog.jp/tag/%e8%a6%aa%e5%ad%90/' class='tag-link-588' title='3件のトピック' style='font-size: 8pt;'>親子</a>
+
+<a href='http://plusblog.jp/tag/%e8%b5%a4%e3%81%a1%e3%82%83%e3%82%93/' class='tag-link-127' title='4件のトピック' style='font-size: 9.09375pt;'>赤ちゃん</a>
+
+<a href='http://plusblog.jp/tag/%e8%bb%8a/' class='tag-link-255' title='5件のトピック' style='font-size: 9.96875pt;'>車</a>
+
+<a href='http://plusblog.jp/tag/%e9%85%8d%e8%89%b2/' class='tag-link-245' title='4件のトピック' style='font-size: 9.09375pt;'>配色</a>
+
+<a href='http://plusblog.jp/tag/%e9%8c%af%e8%a6%9a/' class='tag-link-339' title='5件のトピック' style='font-size: 9.96875pt;'>錯覚</a>
+
+<a href='http://plusblog.jp/tag/%e9%9b%aa/' class='tag-link-286' title='9件のトピック' style='font-size: 12.375pt;'>雪</a>
+
+<a href='http://plusblog.jp/tag/%e9%9b%b2/' class='tag-link-454' title='4件のトピック' style='font-size: 9.09375pt;'>雲</a>
+
+<a href='http://plusblog.jp/tag/%e9%9c%a7/' class='tag-link-1268' title='4件のトピック' style='font-size: 9.09375pt;'>霧</a>
+
+<a href='http://plusblog.jp/tag/%e9%ad%9a/' class='tag-link-140' title='7件のトピック' style='font-size: 11.28125pt;'>魚</a>
+
+<a href='http://plusblog.jp/tag/%e9%b3%a5/' class='tag-link-466' title='4件のトピック' style='font-size: 9.09375pt;'>鳥</a></div>
+
+</li> </ul>
+
+</div><!-- #third .widget-area -->
+
+
+
+<div id="fourth" class="widget-area">
+
+<ul class="xoxo">
+
+<li id="text-5" class="widget-container widget_text"><h3 class="widget-title">About</h3> <div class="textwidget"><p><img src="http://plusblog.jp/wp-content/themes/plus7/images/footer_profile2.gif" id="profile_image"/>plusblog.jpは2011年12月からスタートしました。</p><p>30代おじさんクリエイターが日刊で更新中。WEBやアプリのアイデアとなるものやライフハックを収穫中です。</p><p>更新はFacebookとツイッターでお知らせしてるので、フォローしてくれると喜びます。</p>
+
+
+
+<ul id="profile_services">
+
+<li><a href="https://twitter.com/plustakk" target="_blank" title="ツイッター"><img src="http://plusblog.jp/wp-content/themes/plus2/images/icon_twitter.png" /></a></li>
+
+<li><a href="http://www.facebook.com/plusblog.jp" target="_blank" title="Facebook"><img src="http://plusblog.jp/wp-content/themes/plus2/images/icon_facebook.png" /></a></li>
+
+<li><a href="http://plusblog.jp/feed/" target="_blank" title="RSS"><img src="http://plusblog.jp/wp-content/themes/plus2/images/icon_rss.png" /></a></li>
+
+</ul>
+
+
+
+<p><a href="http://plusblog.jp/profile/">もっとくわしく</a></p>
+
+
+
+<p id="profile_qr" class="pc"><img src="http://plusblog.jp/wp-content/themes/plus2/images/qr.png" /></p>
+
+</div>
+
+</li> </ul>
+
+</div><!-- #fourth .widget-area -->
+
+
+
+</div><!-- #footer-widget-area -->
+
+</div><!-- #colophon -->
+
+<div id="footer_bottom">
+
+<div id="footer_bottom_content">
+
+<a href="http://plusblog.jp/" title="plusblog.jp" rel="home"><img src="http://plusblog.jp/wp-content/themes/plus7/images/plusblog_hira.png" class="plusblog_hira" /></a>
+
+<div id="site-info">Copyright&copy; 2011-2014 <span class="vcard author"><span class="fn">takk</span></span>@<a href="http://plusblog.jp/" title="plusblog.jp" rel="home">plusblog.jp</a> All rights reserved.</div><!-- #site-info -->
+
+</div><!-- #footer_bottom_content -->
+
+</div><!-- #footer_bottom -->
+
+
+
+</div><!-- #footer_inner -->
+
+</div><!-- #footer -->
+
+
+
+</div><!-- #wrapper -->
+
+
+
+<script type='text/javascript' src='http://plusblog.jp/wp-includes/js/comment-reply.min.js?ver=3.9'></script>
+
+<script type='text/javascript' src='http://plusblog.jp/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.50.0-2014.02.05'></script>
+
+<script type='text/javascript'>
+
+/* <![CDATA[ */
+
+var _wpcf7 = {"loaderUrl":"http:\/\/plusblog.jp\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"\u9001\u4fe1\u4e2d ..."};
+
+/* ]]> */
+
+</script>
+
+<script type='text/javascript' src='http://plusblog.jp/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=3.8'></script>
+
+
+
+<div id="totop">
+
+<a href="#header">ページの先頭へ戻る</a>
+
+</div>
+
+
+
+<span id="feedly_json" style="display:none;">{"id":"feed/http://plusblog.jp/feed/","feedId":"feed/http://plusblog.jp/feed/","language":"ja","subscribers":633,"twitterFollowers":2552,"coverColor":"C0DEED","title":"plusblog","velocity":8.2,"topics":["[web]","ブログ","subscriptions","design","life"],"website":"http://plusblog.jp","coverUrl":"https://pbs.twimg.com/profile_banners/32347734/1365849602/ipad_retina","visualUrl":"http://pbs.twimg.com/profile_images/3514522616/3297dbed87777288199ddc1c51eac333_bigger.png","twitterScreenName":"plustakk"}</span>
+
+
+
+<script type="text/javascript">
+
+var _gaq = _gaq || [];
+
+_gaq.push(['_setAccount', 'UA-319652-32']);
+
+_gaq.push(['_trackPageview']);
+
+
+
+(function() {
+
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+
+ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+
+})();
+
+
+
+jQuery(function(){ jQuery('.socials').html( create_social_button('http://plusblog.jp/tool/chrome/' , '音声認識テキスト化 Chrome書記' , 'plustakk') ); });
+
+
+
+jQuery(function(){
+
+window.___gcfg = {lang: 'ja'};
+
+(function(){var po = document.createElement('script');
+
+po.type = 'text/javascript'; po.async = true;
+
+po.src = 'http://plusblog.jp/wp-content/themes/plus7/socials.js';
+
+var s = document.getElementsByTagName('script')[0];
+
+s.parentNode.insertBefore(po, s); })();
+
+});
+
+</script>
+
+
+
+<script type="text/javascript" src="http://plusblog.jp/wp-content/themes/plus7/functions.js"></script>
+
+
+
+
+
+
+
+</body>
+
+</html>
